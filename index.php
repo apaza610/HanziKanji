@@ -8,9 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="" id="clave">
-    <button type="button" onclick="miFuncion()">AAA</button>
-    <img src="media/1.svg" alt="" id="principal">
+    <input type="text" name="" id="clave" onclick="this.value=''">
+    <button type="button" onclick="miFuncion()">🔎</button>
+    <!-- <img src="media/0.svg" alt="" id="principal"> -->
+    <object type="image/svg+xml" data="media/0.svg" id="principal" width="500" height="500">
+        Your browser does not support SVG.
+    </object>
     <hr>
     <?php 
         $listaSVGs = [];
@@ -40,7 +43,7 @@
                         $metadataContent = '~';
                         // echo '...';
                     }
-                    echo sprintf("<ruby>%s<rt>%s..%s</rt></ruby>",'<img src="' . $nombre . '">', $cadena ,$metadataContent);
+                    // echo sprintf("<ruby>%s<rt>%s..%s</rt></ruby>",'<img src="' . $nombre . '">', $cadena ,$metadataContent);
                 }
             }
         }
