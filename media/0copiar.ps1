@@ -1,0 +1,1 @@
+Copy-Item -Path E:\misapps\web\HanziKanji\media\*.svg -Destination "C:\Users\win\AppData\Roaming\Anki2\User 1\collection.media\kanji\" -Force

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="180"
+   height="180"
+   viewBox="0 0 180 180"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="5.2777778"
+     inkscape:cx="63.28421"
+     inkscape:cy="48.88421"
+     inkscape:window-width="1920"
+     inkscape:window-height="1177"
+     inkscape:window-x="1072"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="0"
+       y="0"
+       width="180"
+       height="180"
+       id="rect2" />
+    <rect
+       x="21.978947"
+       y="36.568421"
+       width="146.65263"
+       height="68.4"
+       id="rect1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#333333;fill-opacity:0.858696"
+       id="rect3"
+       width="180"
+       height="86.778946"
+       x="0"
+       y="0" />
+    <text
+       xml:space="preserve"
+       id="text1"
+       style="font-style:italic;font-weight:bold;font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Bold Italic';text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#786721;fill-opacity:0.858696" />
+    <text
+       xml:space="preserve"
+       id="text2"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:10.6667px;font-family:Calibri;-inkscape-font-specification:'Calibri, Light';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#786721;fill-opacity:0.858696"><tspan
+         x="0"
+         y="9.3333628"
+         id="tspan3"><tspan
+           style="fill:#ffffff"
+           id="tspan2">Se guarda junto al zTool, por eso Bloated </tspan></tspan><tspan
+         x="0"
+         y="22.666739"
+         id="tspan5"><tspan
+           style="fill:#ffffff"
+           id="tspan4">files</tspan></tspan></text>
+  </g>
+</svg>
