@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="codigo/estilo.css">
+    <script src="codigo/main.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="" id="">
-    <input type="button" value="buscar">
+    <input type="text" name="" id="clave">
+    <button type="button" onclick="miFuncion()">AAA</button>
+    <img src="media/1.svg" alt="" id="principal">
     <hr>
     <?php 
         $listaSVGs = [];
@@ -46,6 +48,6 @@
         // echo nl2br(print_r($listaSVGs, true));
         
     ?>
-    
+    <p id="bolivia">lskdflskdjf</p>
 </body>
 </html>
