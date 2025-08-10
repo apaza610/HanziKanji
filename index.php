@@ -11,7 +11,7 @@
     <input type="text" name="" id="clave" onclick="this.value=''">
     <button type="button" onclick="miFuncion()">🔎</button>
     <!-- <img src="media/0.svg" alt="" id="principal"> -->
-    <object type="image/svg+xml" data="media/0.svg" id="principal" width="500" height="500">
+    <object type="image/svg+xml" data="media/0.svg" id="principal" width="350" height="350">
         Your browser does not support SVG.
     </object>
     <hr>
@@ -51,6 +51,5 @@
         // echo nl2br(print_r($listaSVGs, true));
         
     ?>
-    <p id="bolivia">lskdflskdjf</p>
 </body>
 </html>
