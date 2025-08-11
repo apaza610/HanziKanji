@@ -14,7 +14,14 @@
     <object type="image/svg+xml" data="media/0.svg" id="principal" width="350" height="350">
         Your browser does not support SVG.
     </object>
+    
     <hr>
+
+    <button onclick="process()">ok</button>
+    <span id="cuento" class="resaltado2" contenteditable="true" style="color: blue;">愛</span>
+    <div id="resultado">......</div>
+
+
     <?php 
         $listaSVGs = [];
         $ubicacion = "media";
@@ -47,9 +54,7 @@
                 }
             }
         }
-
         // echo nl2br(print_r($listaSVGs, true));
-        
     ?>
 </body>
 </html>
