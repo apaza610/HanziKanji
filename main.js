@@ -45,7 +45,11 @@ function handleServerResponse(){
 window.setTimeout(()=>{
     let params = new URLSearchParams(window.location.search);
     document.getElementById("clave").value = params.get("cosa");
-}, 500);
+}, 300);
+
+window.setTimeout(()=>{
+    document.getElementById("btnLeer").click();
+}, 600);
 
 function estilizar(claseDeseada){
     const selection = window.getSelection();
