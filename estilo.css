@@ -1,0 +1,15 @@
+body {background-color: black;
+    /* color: beige; */
+    color: #808080;
+}
+
+#clave {
+    max-width: 3rem;
+}
+
+.a { color: #F54927; }
+.b { color: #6CF527;}
+.c { color: #27D3F5;}
+.d { color: black; font-weight: bold; background-color: #808080;}
+.e { color: white; font-weight: bold; background-color: #808080;}
+.f { color: #B027F5; text-transform: uppercase;}

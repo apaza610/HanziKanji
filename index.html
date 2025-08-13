@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="codigo/estilo.css">
-    <script src="codigo/main.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="main.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <!-- <img src="media/0.svg" alt="" id="principal"> -->
-    <object type="image/svg+xml" data="media/0.svg" id="principal" width="350" height="350">
-        Your browser does not support SVG.
-    </object>
+    <!-- <img src="media/上.svg" alt="" id="principal"> -->
+    <div id="cuento" contenteditable="true" >abc <span class="a">def</span> ghi jkl mno pqr stu vwx yz</div>
     <br>
     <button type="button" onclick="process('r')">🔎</button>
-    <input type="text" name="" id="clave" onclick="this.value=''">
+    <input type="text" name="" id="clave" onclick="this.value=''" maxlength="6">
     <button type="button" onclick="process('w')">✒️</button>
-    <button type="button" onclick="process('o')">🔃</button>
+    <button type="button" onclick="process('u')">🔃</button>
     <br>
-
-    <!-- <button onclick="process()">ok</button> -->
-    <!-- <span id="cuento" class="resaltado2" contenteditable="true" style="color: gray;">....editar aqui....</span> -->
-    <div id="cuento" contenteditable="true">...***...</div>
+    <!-- <input type="text" name="" id="traducc"> -->
+    <button type="button" onclick="estilizar('a')">赤</button>
+    <button type="button" onclick="estilizar('b')">黄</button>
+    <button type="button" onclick="estilizar('c')">青</button>
+    <button type="button" onclick="estilizar('f')">mM</button>
+    <button type="button" onclick="estilizar('d')">日</button>
+    <button type="button" onclick="estilizar('e')">中</button>
+    <br>
+    <object type="image/svg+xml" data="media/上.svg" id="principal" width="512" height="512">
+        Your browser does not support SVG.
+    </object>
+    <!-- <button type="button" onclick="estilizar('a')">赤</button>
+    <div id="abc">esto es prueba</div> -->
 </body>
 </html>

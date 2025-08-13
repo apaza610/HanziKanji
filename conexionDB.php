@@ -1,0 +1,31 @@
+<?php
+    header('Content-Type: text/xml');
+    echo '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>';
+    echo '<response>';
+
+    // $mysqli = new mysqli("sql112.infinityfree.com", "if0_39688833", "Kcy2HaYly5Yw", "if0_39688833_hanzi_db");
+    $mysqli = new mysqli("127.0.0.1:3306", "root", "", "hanzi_db");     // works en servidor local PC & mobile
+    $mysqli->set_charset("utf8mb4");
+
+    if($_GET['operacion'] == 'r'){
+        $resultado = $mysqli->query("SELECT * FROM hanzi_list WHERE hanzi_glyph='".$_GET['kanji']."';");
+        // echo $resultado -> num_rows;      // da 1  (a menos que haya multiples)
+        
+        $registro = mysqli_fetch_assoc($resultado);
+        echo htmlspecialchars($registro['hanzi_mnemon']);   // htmlspecialchars permite echo tags <i>abc</i> as text
+    }
+    elseif($_GET['operacion'] == 'w'){
+        $resultado = $mysqli->query("INSERT INTO hanzi_list VALUES ('".$_GET['kanji']."','ooliz','".$_GET['cuento']."');");
+        $registro = mysqli_fetch_assoc($resultado);
+        // echo $registro['hanzi_mnemon'];   // arbol
+        // echo "ha sido escrito";
+    }
+    elseif($_GET['operacion'] == 'u'){
+        $resultado = $mysqli->query("UPDATE hanzi_list SET hanzi_mnemon = '".$_GET['cuento']."' WHERE hanzi_glyph ='".$_GET['kanji']."';");
+        // update hanzi_list set hanzi_mnemon = 'china es lo mejor' where hanzi_glyph ='今';
+        $registro = mysqli_fetch_assoc($resultado);
+    }
+
+    $mysqli->close();
+    echo '</response>';
+?>

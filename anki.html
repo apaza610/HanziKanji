@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<style>
+  a { color: inherit; text-decoration: none; }
+</style>
+</head>
+<body>
+	<span id="frontTXT">{{Front}}</span>  
+	<button type="button" onclick="pinyinToggle()">👁️</button>
+
+	<a id="firefox" href="https://www.blendernation.com/">編集</a>
+	<br>
+	<object type="image/svg+xml" data="0.svg" id="mostrario" width="350" height="350">
+		Your browser does not support SVG.
+	</object>
+	<br>
+	<iframe id="miniBrowser" src=`http://localhost:8080/hanzi/?cosa=他` width="350"></iframe>
+    
+    <script>
+        function mostrarHanzi(valor="到"){
+            // let SERVIDOR = navigator.userAgent.includes("Windows") ? "" : "";       // localhost:8080/hanzi para AnkiDroid
+                                                                                // 192.168.1.12/hanzi para PC
+
+            let SERVIDOR = 'http://192.168.1.12/hanzi';             //PC local
+            // let SERVIDOR = 'http://localhost:8080/hanzi';           //AnkiDroid
+            // let SERVIDOR = 'https://yanapiri.xo.je/hanzi';    //Online externo falla por cookies
+
+            navigator.clipboard.writeText(valor);
+
+            // document.getElementById("test").innerHTML = "funca bien!"
+            // alert("Your message here!");
+            let img = new Image();
+            img.onload = function(){
+                document.getElementById("mostrario").data = `kanji/${valor}.svg`;
+            }
+            img.onerror = function(){
+                document.getElementById("mostrario").data = `0.svg`;
+                // alert("hay falla!!");
+            }
+            img.src = `kanji/${valor}.svg`;
+            // document.getElementById("mostrario").data = `kanji/${valor}.svg`;
+
+            document.getElementById("miniBrowser").src = `${SERVIDOR}/?cosa=${valor}`;
+            document.getElementById('firefox').href = `${SERVIDOR}/?cosa=${valor}`;
+        }
+
+        function pinyinToggle(){
+            document.querySelectorAll('rt').forEach(rt => {
+                rt.style.visibility = rt.style.visibility === 'visible' ? 'hidden' : 'visible';
+            });
+        }
+
+        //----------------------------------------
+        function creadorHiperlinks(){
+            const kanjiPattern = /[\u4e00-\u9faf\u3400-\u4dbf]/g;
+            const frontTXT = document.getElementById("frontTXT");
+            const updatedText = frontTXT.innerHTML.replace(kanjiPattern, function(match) {
+                return `<a href="#" class="hanzi" onclick="mostrarHanzi('${match}')">${match}</a>`;
+            });
+            // document.body.innerHTML = updatedText;
+            frontTXT.innerHTML = updatedText;
+        }
+
+        setTimeout(creadorHiperlinks(), 300);
+    </script>
+</body>
+</html>
