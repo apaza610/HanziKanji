@@ -19,3 +19,9 @@ select * from hanzi_list ;
 select * from hanzi_list where hanzi_glyph like '你';
 
 update hanzi_list set hanzi_mnemon = 'olasss' where hanzi_glyph ='今';
+
+alter table hanzi_list rename to hanzi_list_android;
+alter table hanzi_list_android rename to hanzi_list;
+select * from hanzi_list_android ;
+
+INSERT INTO hanzi_list SELECT * FROM hanzi_list_android ON DUPLICATE KEY UPDATE hanzi_mnemon=VALUES(hanzi_mnemon);

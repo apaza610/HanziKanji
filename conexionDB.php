@@ -15,7 +15,7 @@
         echo htmlspecialchars($registro['hanzi_mnemon']);   // htmlspecialchars permite echo tags <i>abc</i> as text
     }
     elseif($_GET['operacion'] == 'w'){
-        $resultado = $mysqli->query("INSERT INTO hanzi_list VALUES ('".$_GET['kanji']."','ooliz','".$_GET['cuento']."');");
+        $resultado = $mysqli->query("INSERT INTO hanzi_list VALUES ('".$_GET['kanji']."','','".$_GET['cuento']."');");
         $registro = mysqli_fetch_assoc($resultado);
         // echo $registro['hanzi_mnemon'];   // arbol
         // echo "ha sido escrito";
