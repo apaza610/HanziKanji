@@ -1,4 +1,4 @@
--- use hanzi_db;
+use hanzi_db;
 
 drop table hanzi_list;
 

@@ -11,7 +11,7 @@
 	<span id="frontTXT">{{Front}}</span>  
 	<button type="button" onclick="pinyinToggle()">👁️</button>
 
-	<a id="firefox" href="https://www.blendernation.com/">編集</a>
+	<a id="firefox" href="https://www.blendernation.com/">🔗</a>
 	<br>
 	<object type="image/svg+xml" data="0.svg" id="mostrario" width="350" height="350">
 		Your browser does not support SVG.
@@ -24,9 +24,9 @@
             // let SERVIDOR = navigator.userAgent.includes("Windows") ? "" : "";       // localhost:8080/hanzi para AnkiDroid
                                                                                 // 192.168.1.12/hanzi para PC
 
-            let SERVIDOR = 'http://192.168.1.12/hanzi';             //PC local
+            // let SERVIDOR = 'http://192.168.1.12/hanzi';             //PC local
             // let SERVIDOR = 'http://localhost:8080/hanzi';           //AnkiDroid
-            // let SERVIDOR = 'https://yanapiri.xo.je/hanzi';    //Online externo falla por cookies
+            let SERVIDOR = 'https://yanapiri.xo.je/hanzi';    //Online externo falla por cookies
 
             navigator.clipboard.writeText(valor);
 

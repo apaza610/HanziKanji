@@ -15,15 +15,16 @@
         echo htmlspecialchars($registro['hanzi_mnemon']);   // htmlspecialchars permite echo tags <i>abc</i> as text
     }
     elseif($_GET['operacion'] == 'w'){
-        $resultado = $mysqli->query("INSERT INTO hanzi_list VALUES ('".$_GET['kanji']."','','".$_GET['cuento']."');");
+        // $resultado = $mysqli->query("INSERT INTO hanzi_list VALUES ('".$_GET['kanji']."','','".$_GET['cuento']."');");
+        // $resultado = $mysqli->query("UPDATE hanzi_list SET hanzi_mnemon = '".$_GET['cuento']."' WHERE hanzi_glyph ='".$_GET['kanji']."';");
+        $resultado = $mysqli->query("
+            INSERT INTO hanzi_list (hanzi_glyph, hanzi_traduc, hanzi_mnemon)
+            VALUES ('".$_GET['kanji']."', '', '".$_GET['cuento']."')
+            ON DUPLICATE KEY UPDATE hanzi_mnemon = VALUES(hanzi_mnemon);
+        ");
         $registro = mysqli_fetch_assoc($resultado);
         // echo $registro['hanzi_mnemon'];   // arbol
         // echo "ha sido escrito";
-    }
-    elseif($_GET['operacion'] == 'u'){
-        $resultado = $mysqli->query("UPDATE hanzi_list SET hanzi_mnemon = '".$_GET['cuento']."' WHERE hanzi_glyph ='".$_GET['kanji']."';");
-        // update hanzi_list set hanzi_mnemon = 'china es lo mejor' where hanzi_glyph ='今';
-        $registro = mysqli_fetch_assoc($resultado);
     }
 
     $mysqli->close();
