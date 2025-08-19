@@ -3,7 +3,7 @@
     echo '<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>';
     echo '<response>';
 
-    // $mysqli = new mysqli("sql112.infinityfree.com", "if0_39688833", "Kcy2HaYly5Yw", "if0_39688833_hanzi_db");
+    //hontoy no mono koko he
     $mysqli = new mysqli("127.0.0.1:3306", "root", "", "hanzi_db");     // works en servidor local PC & mobile
     $mysqli->set_charset("utf8mb4");
 
