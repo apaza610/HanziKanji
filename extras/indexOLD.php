@@ -8,12 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="" id="clave" onclick="this.value=''">
-    <button type="button" onclick="miFuncion()">🔎</button>
+    <style>
+        body {background-color: #393939; color: white;}
+        rt {font-size: 12px;}
+        img {width: 256px;}
+    </style>
+    <!-- <input type="text" name="" id="clave" onclick="this.value=''"> -->
+    <!-- <button type="button" onclick="miFuncion()">🔎</button> -->
     <!-- <img src="media/0.svg" alt="" id="principal"> -->
-    <object type="image/svg+xml" data="media/0.svg" id="principal" width="350" height="350">
+    <!-- <object type="image/svg+xml" data="../media/0.svg" id="principal" width="350" height="350">
         Your browser does not support SVG.
-    </object>
+    </object> -->
     
     <hr>
 
@@ -24,18 +29,19 @@
 
     <?php 
         $listaSVGs = [];
-        $ubicacion = "media";
+        $ubicacion = "../media/";
         $iterador = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($ubicacion));
 
         foreach ($iterador as $fileInfo){
             if($fileInfo->isFile()){
                 $nombre = $fileInfo->getPathname();
+                // print_r($nombre);
                 if(preg_match('/\.svg$/i', $nombre)){
                     $listaSVGs[] = $nombre;
                     // echo '<img src="' . $nombre . '" title="' . $nombre . '">';
-                    // echo '<img src="' . $nombre . '">';
+            //         // echo '<img src="' . $nombre . '">';
                     $cadena = explode('.', $nombre)[0];
-                    $cadena = explode('\\', $cadena)[1];
+                    // $cadena = explode('\\', $cadena)[1];
                     // echo sprintf("<ruby>%s<rt>%s</rt></ruby>",'<img src="' . $nombre . '">', $cadena);
 
                     $dom = new DOMDocument();
@@ -50,7 +56,7 @@
                         $metadataContent = '~';
                         // echo '...';
                     }
-                    // echo sprintf("<ruby>%s<rt>%s..%s</rt></ruby>",'<img src="' . $nombre . '">', $cadena ,$metadataContent);
+                    echo sprintf("<ruby>%s<rt>%s..%s</rt></ruby>",'<img src="' . $nombre . '">', $cadena ,$metadataContent);
                 }
             }
         }
