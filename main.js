@@ -77,15 +77,16 @@ function estilizar(claseDeseada){
     selection.removeAllRanges();
 }
 
-// function mayusculas(){
-//     const selection = window.getSelection();
-//     if (!selection.rangeCount) return;
+function mayusculas(){
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
 
-//     const range = selection.getRangeAt(0);
-//     const selectedText = selection.toString();
-//     const upperText = selectedText.toUpperCase();
+    const range = selection.getRangeAt(0);
+    const selectedText = selection.toString();
+    const upperText = selectedText.toUpperCase();
 
-//     // Replace the selected text with the uppercase version
-//     range.deleteContents();
-//     range.insertNode(document.createTextNode(upperText));
-// }
+    // Replace the selected text with the uppercase version
+    range.deleteContents();
+    range.insertNode(document.createTextNode(upperText));
+    estilizar('f');
+}

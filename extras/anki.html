@@ -17,16 +17,14 @@
 		Your browser does not support SVG.
 	</object>
 	<br>
-	<iframe id="miniBrowser" src=`http://localhost:8080/hanzi/?cosa=他` width="350"></iframe>
+	<iframe id="miniBrowser" src="http://localhost:8080/hanzi/?cosa=他" onerror="this.src = 'http://localhost/hanzi/?cosa=他';" width="350" height="100"></iframe>
     
     <script>
         function mostrarHanzi(valor="到"){
-            // let SERVIDOR = navigator.userAgent.includes("Windows") ? "" : "";       // localhost:8080/hanzi para AnkiDroid
-                                                                                // 192.168.1.12/hanzi para PC
-
             // let SERVIDOR = 'http://192.168.1.12/hanzi';             //PC local
             // let SERVIDOR = 'http://localhost:8080/hanzi';           //AnkiDroid
-            let SERVIDOR = 'https://yanapiri.xo.je/hanzi';    //Online externo falla por cookies
+            // let SERVIDOR = 'https://yanapiri.xo.je';    //Online externo falla require Cookies en InfiniFree server
+            const SERVIDOR = navigator.userAgent.includes("Windows") ? "http://192.168.1.12/hanzi" : "http://localhost:8080/hanzi";
 
             navigator.clipboard.writeText(valor);
 
@@ -54,6 +52,7 @@
         }
 
         //----------------------------------------
+        
         function creadorHiperlinks(){
             const kanjiPattern = /[\u4e00-\u9faf\u3400-\u4dbf]/g;
             const frontTXT = document.getElementById("frontTXT");

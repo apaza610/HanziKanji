@@ -1,5 +1,5 @@
-body {background-color: #877373;
-    color: #575757;
+body {background-color: #393939;
+    color: gray;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -7,9 +7,9 @@ body {background-color: #877373;
     max-width: 3rem;
 }
 
-.a { color: #F54927; }
-.b { color: #6CF527;}
-.c { color: #27D3F5;}
+.a { color: red; }
+.b { color: green;}
+.c { color: blue;}
 .d { color: black; font-weight: bold; }
 .e { color: white; font-weight: bold; }
-.f { color: white; text-transform: uppercase; background-color: #393939;}
+.f { color: fuchsia;}
