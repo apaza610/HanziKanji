@@ -1,4 +1,7 @@
 <?php
+// Set UTF-8 locale for multibyte safety
+setlocale(LC_ALL, 'en_US.UTF-8'); // or 'ja_JP.UTF-8' if needed
+
 $clave = $_POST['clave'];           // 件
 
 $newText = $_POST['divContent'];    // bla bla <span class='a'>bla</span>
@@ -18,11 +21,13 @@ echo "Para: ".$clave." grabando: ".$newText;
 
 // $newText = urldecode($newText);
 
+checkIfSVGexists($clave);
+
 // Load the SVG file
 $doc = new DOMDocument();
 $doc->load("media/".$clave.".svg");
-$doc->preserveWhiteSpace = false;
-$doc->formatOutput = true;
+// $doc->preserveWhiteSpace = false;
+// $doc->formatOutput = true;
 
 // Register namespace for XPath
 $xpath = new DOMXPath($doc);
@@ -51,4 +56,29 @@ $doc->save("media/".$clave.".svg");
 echo "<br>";
 echo "✅ SVG updated! <br>";
 echo "<a href='media/".$clave.".svg' target='_blank'>Open modified SVG</a>";
+
+function checkIfSVGexists($hanzi){
+    // Original and duplicate paths
+    $originalPath = 'media/0.svg';
+    $duplicatePath = "media/".$hanzi.".svg";
+
+    // Read the original SVG
+    $svgContent = file_get_contents($originalPath);
+    if ($svgContent === false) {
+        die("❌ Failed to read original SVG file.");
+    }
+
+    if (file_exists($duplicatePath)){
+        echo "<br>SVG ya existente";
+    }else{
+        // Write to the new file
+        $result = file_put_contents($duplicatePath, $svgContent);
+        if ($result === false) {
+            die("❌ Failed to write duplicate SVG file.");
+        }
+    
+        echo "<br>✅ SVG duplicated successfully as $duplicatePath";
+    }
+
+}
 ?>
