@@ -48,6 +48,6 @@ text { fill: gray; font-family: Arial, sans-serif; font-size: 20px; inline-size:
  <g id="g1">
  <rect class="caja" width="512" height="74" opacity="0.85" id="rect1" />
  <text id="monogatari" x="0" y="20" xml:space="preserve"><tspan x="0" y="20" id="tspan2">UMSA</tspan></text>
- <text class="h" id="hanzi" transform="translate(300 400)" xml:space="preserve"><tspan x="0" y="70.875" id="tspan3">召</tspan></text>
+ <text class="h" transform="translate(300 400)" xml:space="preserve"><tspan x="0" y="70" id="hanzi">φ</tspan></text>
  </g>
  </svg>
