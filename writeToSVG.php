@@ -1,9 +1,4 @@
 <?php
-// if (!isset($_POST['newText'])) {
-//     echo "❌ No text provided!";
-//     exit;
-// }
-
 $clave = $_POST['clave'];           // 件
 
 $newText = $_POST['divContent'];    // bla bla <span class='a'>bla</span>

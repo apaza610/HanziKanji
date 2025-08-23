@@ -17,7 +17,7 @@
 
         <input type="hidden" name="divContent" id="divContent">
         <input type="text" name="clave" id="clave" onclick="this.value=''" maxlength="6">
-        <button type="submit">SVG変化</button>
+        <button type="submit">SVGtxt</button>
     </form>
     <!-- <textarea name="" id="cuento">****</textarea> -->
     <object type="image/svg+xml" data="media/上.svg" id="principal" width="512" height="512">
@@ -25,12 +25,17 @@
     </object>
     <br>
     <!-- <input type="text" name="" id="traducc"> -->
-    <button type="button" onclick="estilizar('a')">赤</button>
-    <button type="button" onclick="estilizar('b')">黄</button>
-    <button type="button" onclick="estilizar('c')">青</button>
-    <button type="button" onclick="mayusculas()">M</button>
-    <button type="button" onclick="estilizar('e')">日</button>
-    <button type="button" onclick="estilizar('d')">中</button>
+    <form action="writeIMGtoSVG.php" method="post" onsubmit="copyDivContent()">
+        <button type="button" onclick="estilizar('a')">赤</button>
+        <button type="button" onclick="estilizar('b')">黄</button>
+        <button type="button" onclick="estilizar('c')">青</button>
+        <button type="button" onclick="mayusculas()">M</button>
+        <button type="button" onclick="estilizar('e')">日</button>
+        <button type="button" onclick="estilizar('d')">中</button>
+        
+        <input type="hidden" name="clave2" id="clave2">
+        <button type="submit">SVGimg</button>
+    </form>
     
     <!-- <div id="abc">esto es prueba</div> -->
     
@@ -38,6 +43,7 @@
     <script>
         function copyDivContent() {
             document.getElementById("divContent").value = document.getElementById("cuento").innerHTML; // or .innerText if only text
+            document.getElementById("clave2").value = document.getElementById("clave").value;
         }
     </script>
 </body>
