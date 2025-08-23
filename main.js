@@ -90,3 +90,7 @@ function mayusculas(){
     range.insertNode(document.createTextNode(upperText));
     estilizar('f');
 }
+
+function abrirSVG(){
+    document.getElementById("firefox").href = "media/" + document.getElementById("clave").value + ".svg";
+}

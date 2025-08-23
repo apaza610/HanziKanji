@@ -17,15 +17,13 @@
 		Your browser does not support SVG.
 	</object>
 	<br>
-	<iframe id="miniBrowser" src="http://localhost:8080/hanzi/?cosa=他" onerror="this.src = 'http://localhost/hanzi/?cosa=他';" width="350" height="100"></iframe>
+	<!-- <iframe id="miniBrowser" src="http://localhost:8080/hanzi/?cosa=他" onerror="this.src = 'http://localhost/hanzi/?cosa=他';" width="350" height="100"></iframe> -->
     
     <script>
         function mostrarHanzi(valor="到"){
-            // let SERVIDOR = 'http://192.168.1.12/hanzi';             //PC local
-            // let SERVIDOR = 'http://localhost:8080/hanzi';           //AnkiDroid
-            // let SERVIDOR = 'https://yanapiri.xo.je';    //Online externo falla require Cookies en InfiniFree server
-            const SERVIDOR = navigator.userAgent.includes("Windows") ? "http://192.168.1.12/hanzi" : "http://localhost:8080/hanzi";
-
+            const SERVIDOR = 'https://yanapiri.xo.je/hanzi';    //Online falla en <iframe> require Cookies InfiniFree 
+            // const SERVIDOR = navigator.userAgent.includes("Windows") ? "http://192.168.1.12/hanzi" : "http://localhost:8080/hanzi";
+                                                                            //PC local                      AnkiDroid
             navigator.clipboard.writeText(valor);
 
             // document.getElementById("test").innerHTML = "funca bien!"
@@ -41,7 +39,7 @@
             img.src = `kanji/${valor}.svg`;
             // document.getElementById("mostrario").data = `kanji/${valor}.svg`;
 
-            document.getElementById("miniBrowser").src = `${SERVIDOR}/?cosa=${valor}`;
+            // document.getElementById("miniBrowser").src = `${SERVIDOR}/?cosa=${valor}`;
             document.getElementById('firefox').href = `${SERVIDOR}/?cosa=${valor}`;
         }
 
