@@ -10,21 +10,35 @@
 <body>
     <!-- <img src="media/上.svg" alt="" id="principal"> -->
     <div id="cuento" contenteditable="true" >..</div>
+    
+    <form action="writeToSVG.php" method="post" onsubmit="copyDivContent()">
+        <button type="button" id="btnLeer" onclick="process('r')">DB🔎</button>
+        <button type="button" onclick="process('w')">DB✒️</button>
+
+        <input type="hidden" name="divContent" id="divContent">
+        <input type="text" name="clave" id="clave" onclick="this.value=''" maxlength="6">
+        <button type="submit">SVG変化</button>
+    </form>
+    <!-- <textarea name="" id="cuento">****</textarea> -->
     <object type="image/svg+xml" data="media/上.svg" id="principal" width="512" height="512">
         Tu browser no soporta SVG.
     </object>
     <br>
-    <button type="button" id="btnLeer" onclick="process('r')">🔎</button>
-    <input type="text" name="" id="clave" onclick="this.value=''" maxlength="6">
-    <button type="button" onclick="process('w')">✒️</button>
     <!-- <input type="text" name="" id="traducc"> -->
     <button type="button" onclick="estilizar('a')">赤</button>
     <button type="button" onclick="estilizar('b')">黄</button>
     <button type="button" onclick="estilizar('c')">青</button>
     <button type="button" onclick="mayusculas()">M</button>
-    <button type="button" onclick="estilizar('d')">日</button>
-    <button type="button" onclick="estilizar('e')">中</button>
+    <button type="button" onclick="estilizar('e')">日</button>
+    <button type="button" onclick="estilizar('d')">中</button>
     
-    <div id="abc">esto es prueba</div> -->
+    <!-- <div id="abc">esto es prueba</div> -->
+    
+    <!-- <button onclick="updateSVG()">writeToSVG</button> -->
+    <script>
+        function copyDivContent() {
+            document.getElementById("divContent").value = document.getElementById("cuento").innerHTML; // or .innerText if only text
+        }
+    </script>
 </body>
 </html>

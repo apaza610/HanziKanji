@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" version="1.1" viewBox="0 0 512 512">
+<style>
+.caja { fill: #393939;}
+div { color: gray; font-family: Arial, sans-serif; font-size: 20px;}
+.a { color: red; }
+.b { color: green;}
+.c { color: blue;}
+.d { color: black; font-weight: bold; }
+.e { color: white; font-weight: bold; }
+.f { color: fuchsia;}
+
+.h { fill: seashell; font-size: 72px;}
+</style>
+ <g>
+<rect class="caja" width="512" height="74" opacity="0.85"/> 
+<text id="monogatari" x="0" y="20">UMSA</text>  
+<text class="h" id="hanzi" transform="translate(300 400)"><tspan>召</tspan></text>
+ </g>
+</svg>
