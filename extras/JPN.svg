@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="20"
+   height="13.333333"
+   version="1.0"
+   id="svg16"
+   sodipodi:docname="JPN.svg"
+   inkscape:version="1.4.2 (ebf0e94, 2025-05-08)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16" />
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="8.7111111"
+     inkscape:cx="31.396684"
+     inkscape:cy="22.614796"
+     inkscape:window-width="1920"
+     inkscape:window-height="1177"
+     inkscape:window-x="1072"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16" />
+  <rect
+     width="20"
+     height="13.333334"
+     fill="#ffffff"
+     id="rect1"
+     x="0"
+     y="0"
+     style="stroke-width:0.0222222" />
+  <g
+     fill="#be0026"
+     id="g16"
+     transform="scale(0.02222222)">
+    <circle
+       cx="442"
+       cy="300"
+       r="153"
+       id="circle1" />
+    <path
+       d="m 0,0 h 130 l 218,185 -20.2,21.1 z"
+       id="path1" />
+    <path
+       d="m 230,0 h 75 l 94.1,156 -27,11.6 z"
+       id="path2" />
+    <path
+       d="m 405,0 h 70 l -18.6,151 -29.2,-0.0352 z"
+       id="path3" />
+    <path
+       d="m 575,0 h 75 L 512,168 484.9,156.6 Z"
+       id="path4" />
+    <path
+       d="M 750,0 H 880 L 556,206 535.7,185 Z"
+       id="path5" />
+    <path
+       d="m 405,600 h 70 l -18.6,-151 -29.1,-0.082 z"
+       id="path6" />
+    <path
+       d="m 230,600 h 74.9 L 399,444 372,432.5 Z"
+       id="path7" />
+    <path
+       d="M 0,600 H 130 L 348,415 326.8,394.6 Z"
+       id="path8" />
+    <path
+       d="m 575,600 h 75 L 511,432 484.2,443.6 Z"
+       id="path9" />
+    <path
+       d="M 750,600 H 880 L 556,394 535.9,415.2 Z"
+       id="path10" />
+    <path
+       d="m 900,95 v 75 l -316,86.9 -10.9,-27.4 z"
+       id="path11" />
+    <path
+       d="m 900,265 v 70 l -310,-20.3 0.266,-29.5 z"
+       id="path12" />
+    <path
+       d="m 900,430 v 75 L 573,370 584.4,342.9 Z"
+       id="path13" />
+    <path
+       d="m 0,95 v 75 l 300,87.1 11.4,-27.1 z"
+       id="path14" />
+    <path
+       d="m 0,265 v 70 l 294,-20.3 -0.0469,-29.4 z"
+       id="path15" />
+    <path
+       d="m 0,430 v 75 L 311,370 299.6,342.9 Z"
+       id="path16" />
+  </g>
+</svg>

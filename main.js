@@ -2,7 +2,21 @@ let 物 = new XMLHttpRequest();
 
 function process(operacion){
     let img = new Image();
-    let hanzi = document.getElementById("clave").value;
+    let hanzi;
+    
+    switch(parseInt(
+        document.querySelector('input[name="elector"]:checked').value
+    )){
+        case 0:
+            hanzi = document.getElementById("clave1").value;
+            break;
+        case 1:
+            hanzi = document.getElementById("clave2").value;
+            break;
+        case 2:
+            hanzi = document.getElementById("clave3").value;
+            break;
+    }
     
     document.querySelectorAll('#cuento span').forEach(span => { //span vacios salen cortados en database
         if (span.textContent.trim() === ''){

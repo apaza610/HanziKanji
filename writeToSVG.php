@@ -2,7 +2,10 @@
     // Set UTF-8 locale for multibyte safety
     setlocale(LC_ALL, 'en_US.UTF-8'); // or 'ja_JP.UTF-8' if needed
 
-    $clave = $_POST['clave'];           // 件
+    $elector= $_POST['elector'];         // which one will give the svg its name
+    $claves = [$_POST['clave1'], $_POST['clave2'], $_POST['clave3']];
+                // tradicional       shinjitaiJP      simplificado
+    $clave = $claves[$elector];
 
     $newText = $_POST['divContent'];    // bla bla <span class='a'>bla</span>
     $newText = html_entity_decode($newText);
@@ -19,53 +22,29 @@
     // $lines[14] = $newText;                                  // Line 15 es del texto deseado
     // file_put_contents($filePath, implode(PHP_EOL, $lines)); // Write back to file
 
-    // $newText = urldecode($newText);
+    $newText = urldecode($newText);
 
-    checkIfSVGexists($clave);
-
-    // Load the SVG file
-    $doc = new DOMDocument();
-    $doc->load("media/".$clave.".svg");
-    // $doc->preserveWhiteSpace = false;
-    // $doc->formatOutput = true;
-
-    // Register namespace for XPath
-    $xpath = new DOMXPath($doc);
-    // $xpath->registerNamespace("svg", "http://www.w3.org/2000/svg");
-
-    $nodes = $xpath->query('//*[@id="monogatari"]');    // Find element with id="monogatari"
-
-    if ($nodes->length > 0) {
-        $node = $nodes->item(0);
-
-        while ($node->firstChild) {                         // Remove old text content
-            $node->removeChild($node->firstChild);
-        }
-
-        // Insert new mixed content (text + <tspan>)
-        $frag = $doc->createDocumentFragment();
-        // $frag->appendXML('abc <tspan>jejeje</tspan> final');
-        $frag->appendXML($newText);
-        $node->appendChild($frag); // Add new text content
+    // Check if empty
+    if (empty($clave)) {
+        echo "⚠️ Variable is empty go back to correct !!";
+        exit; // or die("⚠️ Username is required.");
     }
 
-    reemplazarHanzi($doc, $clave);
 
-    // Save modified SVG
-    $doc->save("media/".$clave.".svg");
+    crearSVGsiNoExiste($clave);
+    grabarMnemonico($clave, $newText);
+    colocarHanziKanji($clave, $claves);
 
-    // Return response to JavaScript
-    echo "<br>";
-    echo "✅ SVG updated! <br>";
-    echo "<a href='media/".$clave.".svg' target='_blank'>Open modified SVG</a>";
-
-    function checkIfSVGexists($hanzi){
+    function crearSVGsiNoExiste($hanzi){
         // Original and duplicate paths
         $originalPath = 'media/0.svg';
         $duplicatePath = "media/".$hanzi.".svg";
 
         // Read the original SVG
         $svgContent = file_get_contents($originalPath);
+        $svgContent = str_replace("0.jpg", $hanzi.".jpg", $svgContent);
+
+
         if ($svgContent === false) {
             die("❌ Failed to read original SVG file.");
         }
@@ -84,26 +63,63 @@
 
     }
 
-    function reemplazarHanzi($dom, $hanzi){
-        // $hanzi = $xpath->query('//*[@id="hanzi"]');    // Find element with id="monogatari"
-        // Find the <tspan> element with id="abc"
-        $tspan = null;
-        foreach ($dom->getElementsByTagName('tspan') as $node) {
-            if ($node->getAttribute('id') === 'hanzi') {
-                $tspan = $node;
-                break;
+    function grabarMnemonico($clave, $newText){
+        // Load the SVG file
+        $doc = new DOMDocument();
+        $doc->load("media/".$clave.".svg");
+        // $doc->preserveWhiteSpace = false;
+        // $doc->formatOutput = true;
+
+        // Register namespace for XPath
+        $xpath = new DOMXPath($doc);
+        // $xpath->registerNamespace("svg", "http://www.w3.org/2000/svg");
+
+        $nodes = $xpath->query('//*[@id="monogatari"]');    // Find element with id="monogatari"
+
+        if ($nodes->length > 0) {
+            $node = $nodes->item(0);
+
+            while ($node->firstChild) {                         // Remove old text content
+                $node->removeChild($node->firstChild);
             }
-        }
 
-        if ($tspan) {
-            // Replace its inner text
-            $tspan->nodeValue = $hanzi;
-
-            // Save the updated SVG
-        //     $dom->save('path/to/updated.svg');
-        //     echo "✅ <tspan id='abc'> text replaced with 'XYZ'.";
-        // } else {
-        //     echo "⚠️ No <tspan id='abc'> found.";
+            // Insert new mixed content (text + <tspan>)
+            $frag = $doc->createDocumentFragment();
+            // $frag->appendXML('abc <tspan>jejeje</tspan> final');
+            $frag->appendXML($newText);
+            $node->appendChild($frag); // Add new text content
         }
+        // Save modified SVG
+        $doc->save("media/".$clave.".svg");
+
+        // Return response to JavaScript
+        echo "<br>";
+        echo "✅ SVG updated! <br>";
+        echo "<a href='media/".$clave.".svg' target='_blank'>Open modified SVG</a>";
+    }
+
+    function colocarHanziKanji($clave, $claves){
+        $doc = new DOMDocument();   // Load the SVG file
+        $doc->load("media/".$clave.".svg"); // put your SVG filename here
+
+        // Use XPath to find the <tspan> with id="simpli"
+        $xpath = new DOMXPath($doc);
+        
+        $nodes = $xpath->query("//*[@id='tradi']");
+        if ($nodes->length > 0) {
+            $tspan = $nodes->item(0);
+            $tspan->nodeValue = $claves[0]; // replace text
+        } 
+        $nodes = $xpath->query("//*[@id='shinji']");
+        if ($nodes->length > 0) {
+            $tspan = $nodes->item(0);
+            $tspan->nodeValue = $claves[1]; // replace text
+        } 
+        $nodes = $xpath->query("//*[@id='simpli']");
+        if ($nodes->length > 0) {
+            $tspan = $nodes->item(0);
+            $tspan->nodeValue = $claves[2]; // replace text
+        } 
+        $doc->save("media/".$clave.".svg");  
     }
 ?>

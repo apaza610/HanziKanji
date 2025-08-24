@@ -1,0 +1,9 @@
+.caja { fill: #393939; opacity: 0.5;}
+text { fill: gray; font-family: Arial, sans-serif; font-size: 20px; inline-size: 512px;}
+.a { fill: red;}
+.b { fill: green;}
+.c { fill: blue;}
+.d { fill: white; font-weight: bold;}
+.e { fill: black; font-weight: bold;}
+.f { fill: fuchsia;}
+.h { fill: azure; font-size: 72px;}

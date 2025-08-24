@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="400" height="300">
+
+  <!-- Import external CSS -->
+  <style type="text/css">
+    @import url("styles.css");
+  </style>
+
+  <!-- Background image (external JPG) -->
+  <image href="photo.jpg" x="0" y="0" width="400" height="300" />
+
+  <!-- Styled text -->
+  <text x="20" y="50" class="title">Hello SVG</text>
+
+</svg>
