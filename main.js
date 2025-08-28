@@ -1,8 +1,8 @@
 let 物 = new XMLHttpRequest();
+let hanzi;
 
 function process(operacion){
     let img = new Image();
-    let hanzi;
     
     switch(parseInt(
         document.querySelector('input[name="elector"]:checked').value
@@ -17,13 +17,16 @@ function process(operacion){
             hanzi = document.getElementById("clave3").value;
             break;
     }
+
+    if (hanzi === ""){
+        alert("olvidaste hanzi/kanji input!!");
+        return;
+    }
     
     document.querySelectorAll('#cuento span').forEach(span => { //span vacios salen cortados en database
-        if (span.textContent.trim() === ''){
-            span.remove();
-        }
+        if (span.textContent.trim() === ''){ span.remove(); }
     });
-    let cuento = document.getElementById("cuento").innerHTML;
+    let cuento = document.getElementById("cuento").innerHTML.replace(/&nbsp;/g, ' ');    //limpiar string o saldra cortado en database
     // console.log(cuento);
 
     img.onload = function(){
@@ -49,7 +52,8 @@ function handleServerResponse(){
             xmlResponse = 物.responseXML;
             xmlDocumentElement = xmlResponse.documentElement;
             message = xmlDocumentElement.firstChild.data;
-            document.getElementById("cuento").innerHTML = message;
+            // document.getElementById("cuento").innerHTML = message;
+            document.getElementById("cuento").innerHTML = message === undefined ? ".." : message;
         }else{
             alert("algo ha fallado");
         }
@@ -58,10 +62,10 @@ function handleServerResponse(){
 
 window.setTimeout(()=>{
     let params = new URLSearchParams(window.location.search);
-    document.getElementById("clave").value = params.get("cosa");
+    document.getElementById("clave1").value = params.get("cosa");
 }, 300);
 
-window.setTimeout(()=>{
+window.setTimeout(()=>{         // si vienes de ANKI busqueda sera automatica
     document.getElementById("btnLeer").click();
 }, 600);
 
@@ -106,5 +110,14 @@ function mayusculas(){
 }
 
 function abrirSVG(){
-    document.getElementById("firefox").href = "media/" + document.getElementById("clave").value + ".svg";
+    document.getElementById("firefox").href = `media/${hanzi}.svg`;
+}
+
+function splitLines() {
+    let container = document.getElementById("cuento");
+    var range = document.createRange();
+    range.setStart(container, start);
+    range.setEnd(container, end);
+    var selectedText = range.getClientRects();
+    console.log(selectedText);
 }

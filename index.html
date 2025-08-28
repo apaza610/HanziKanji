@@ -9,6 +9,7 @@
 </head>
 <body>
     <!-- <img src="media/上.svg" alt="" id="principal"> -->
+    <div id="mascara" style="width:10px; height:72px; background:black;"></div>
     <div id="cuento" contenteditable="true" >..</div>
     
     <form action="writeToSVG.php" method="post" onsubmit="copyDivContent()">
@@ -16,33 +17,33 @@
         <span style="background-color: red; color: black;">
             <label>trad</label> <input type="radio" name="elector" value="0" checked>
         </span>
-        ..
         <span style="background-color: blue; color: white;">
             <label>shin</label> <input type="radio" name="elector" value="1">
         </span>
-        ..
         <span style="background-color: black; color: white;">
             <label>simp</label> <input type="radio" name="elector" value="2">
         </span>
 ....
         <button type="button" id="btnLeer" onclick="process('r')">DB🔎</button>
-...........................................
+....
         <button type="button" onclick="process('w')">DB✒️</button>
         <br>
         <input type="hidden" name="divContent" id="divContent">
         <input type="text" name="clave1" id="clave1" onclick="this.value=''" maxlength="6">
         <input type="text" name="clave2" id="clave2" onclick="this.value=''" maxlength="6">
         <input type="text" name="clave3" id="clave3" onclick="this.value=''" maxlength="6">
-        ...
+        ..
         <a id="firefox" href="https://www.blendernation.com/" onclick="abrirSVG()">🔗</a>
-        ...
-        <button type="button" onclick="estilizar('a')">赤</button>
-        <button type="button" onclick="estilizar('b')">黄</button>
-        <button type="button" onclick="estilizar('c')">青</button>
+        ..
+        <button type="button" onclick="estilizar('a')" style="color: red;">■</button>
+        <button type="button" onclick="estilizar('b')" style="color: limegreen;">■</button>
+        <button type="button" onclick="estilizar('c')" style="color: blue;">■</button>
         <button type="button" onclick="mayusculas()">M</button>
         <button type="button" onclick="estilizar('d')"><img src="extras/CHN.svg" width="20" ></button>
         <button type="button" onclick="estilizar('e')"><img src="extras/JPN.svg" width="20" ></button>
         <button type="submit">SVG✒️</button>
+
+        <!-- <button type="button" onclick="splitLines()">💀</button> -->
     </form>
     
     <!-- <textarea name="" id="cuento">****</textarea> -->

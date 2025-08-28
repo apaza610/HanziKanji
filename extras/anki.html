@@ -8,12 +8,11 @@
 </style>
 </head>
 <body>
-	<span id="frontTXT">{{Front}}</span>  
+	<span id="frontTXT">{{Front}}</span>
 	<button type="button" onclick="pinyinToggle()">👁️</button>
-
 	<a id="firefox" href="https://www.blendernation.com/">🔗</a>
-	<br>
-	<object type="image/svg+xml" data="0.svg" id="mostrario" width="350" height="350">
+    <hr>
+	<object type="image/svg+xml" data="media/0.svg" id="mostrario" width="350" height="350">
 		Your browser does not support SVG.
 	</object>
 	<br>
@@ -26,20 +25,14 @@
                                                                             //PC local                      AnkiDroid
             navigator.clipboard.writeText(valor);
 
-            // document.getElementById("test").innerHTML = "funca bien!"
-            // alert("Your message here!");
             let img = new Image();
             img.onload = function(){
-                document.getElementById("mostrario").data = `kanji/${valor}.svg`;
+                document.getElementById("mostrario").data = `media/${valor}.svg`;
             }
             img.onerror = function(){
-                document.getElementById("mostrario").data = `0.svg`;
-                // alert("hay falla!!");
+                document.getElementById("mostrario").data = `media/0.svg`;
             }
-            img.src = `kanji/${valor}.svg`;
-            // document.getElementById("mostrario").data = `kanji/${valor}.svg`;
-
-            // document.getElementById("miniBrowser").src = `${SERVIDOR}/?cosa=${valor}`;
+            img.src = `media/${valor}.svg`;
             document.getElementById('firefox').href = `${SERVIDOR}/?cosa=${valor}`;
         }
 
@@ -50,7 +43,6 @@
         }
 
         //----------------------------------------
-        
         function creadorHiperlinks(){
             const kanjiPattern = /[\u4e00-\u9faf\u3400-\u4dbf]/g;
             const frontTXT = document.getElementById("frontTXT");

@@ -3,11 +3,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="你.jpg"/>
- <g id="grupito">
+ 
  <rect id="rect1" class="caja" width="512" height="74"/>
  <text id="monogatari" y="20" xml:space="preserve">si <tspan class="d">ni</tspan> con <tspan class="c">小</tspan> pudiste atrapar <tspan class="b">algo</tspan> en anzuelo, el<tspan x="0" dy="20">problema es <tspan class="f">TU</tspan> <tspan class="a">persona</tspan>..</tspan></text>
  <text class="h" transform="translate(10  480)" xml:space="preserve"><tspan id="tradi">你</tspan></text>
  <text class="h" transform="translate(200 500)" xml:space="preserve"><tspan id="shinji"></tspan></text>
  <text class="h" transform="translate(400 480)" xml:space="preserve"><tspan id="simpli"></tspan></text>
- </g>
+ 
  </svg>
