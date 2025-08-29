@@ -3,7 +3,7 @@
     setlocale(LC_ALL, 'en_US.UTF-8'); // or 'ja_JP.UTF-8' if needed
 
     $elector= $_POST['elector'];         // which one will give the svg its name
-    $claves = [$_POST['clave1'], $_POST['clave2'], $_POST['clave3']];
+    $claves = [trim($_POST['clave1']), trim($_POST['clave2']), trim($_POST['clave3'])];
                 // tradicional       shinjitaiJP      simplificado
     $clave = $claves[$elector];
 

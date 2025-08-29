@@ -8,13 +8,13 @@ function process(operacion){
         document.querySelector('input[name="elector"]:checked').value
     )){
         case 0:
-            hanzi = document.getElementById("clave1").value;
+            hanzi = document.getElementById("clave1").value.trim();
             break;
         case 1:
-            hanzi = document.getElementById("clave2").value;
+            hanzi = document.getElementById("clave2").value.trim();
             break;
         case 2:
-            hanzi = document.getElementById("clave3").value;
+            hanzi = document.getElementById("clave3").value.trim();
             break;
     }
 
