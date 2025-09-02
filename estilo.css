@@ -23,7 +23,7 @@ body {
 }
 #clave1, #clave2, #clave3 { max-width: 3rem; }
 
-a { text-decoration: none; }
+a { text-decoration: none; color: yellow;}
 
 /* Styles for mobile browsers */
 @media (pointer:none), (pointer:coarse) { 

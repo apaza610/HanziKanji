@@ -110,7 +110,7 @@ function mayusculas(){
 }
 
 function abrirSVG(){
-    document.getElementById("firefox").href = `media/${hanzi}.svg`;
+    document.getElementById("firefox").href = `media/svgEditor.html?valor=${hanzi}`;
 }
 
 function splitLines() {
@@ -120,4 +120,16 @@ function splitLines() {
     range.setEnd(container, end);
     var selectedText = range.getClientRects();
     console.log(selectedText);
+}
+
+function limpiarGUI(){
+    document.getElementById("clave1").value = "";
+    document.getElementById("clave2").value = "";
+    document.getElementById("clave3").value = "";
+    document.getElementById("cuento").innerHTML = "..";
+    document.getElementById("principal").data = "media/0.svg";
+}
+
+function refrescar(){
+    document.getElementById("principal").data = `media/${hanzi}.svg?t=${Date.now()}`;
 }

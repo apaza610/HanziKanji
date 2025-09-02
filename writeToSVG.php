@@ -11,7 +11,7 @@
     $newText = html_entity_decode($newText);
     $newText = str_replace('<span', '<tspan', $newText);
     $newText = str_replace('/span>', '/tspan>', $newText);
-    $newText = str_replace('<div>', '<tspan x="0" dy="20">', $newText);
+    $newText = str_replace('<div>', '<tspan x="0" dy="22">', $newText);
     $newText = str_replace('</div>', '</tspan>', $newText);
     // file_put_contents("media/output.txt", $newText);        // en TXT < y > salen OK
     echo "Para: ".$clave." grabando: ".$newText;
@@ -29,7 +29,6 @@
         echo "⚠️ Variable is empty go back to correct !!";
         exit; // or die("⚠️ Username is required.");
     }
-
 
     crearSVGsiNoExiste($clave);
     grabarMnemonico($clave, $newText);

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+<style id="style1">@import url("estilosSVG.css");</style>
+<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="步.jpg"/>
+ 
+ <rect id="rect1" class="caja" width="512" height="74"/>
+ <text id="monogatari" y="20" xml:space="preserve">..un <tspan class="f">PASITO </tspan>es <tspan class="a">para</tspan>r cada <tspan class="b">poquito</tspan>, winnie <tspan class="d">poo</tspan>h <tspan x="0" dy="20">and <tspan class="e">ho</tspan>mer <tspan class="f">WALK</tspan>..</tspan></text>
+ <text class="h" transform="translate(10  480)" xml:space="preserve"><tspan id="tradi">步</tspan></text>
+ <text class="h" transform="translate(200 500)" xml:space="preserve"><tspan id="shinji">歩</tspan></text>
+ <text class="h" transform="translate(400 480)" xml:space="preserve"><tspan id="simpli"></tspan></text>
+ 
+ </svg>
