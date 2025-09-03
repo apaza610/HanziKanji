@@ -4,7 +4,7 @@
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="跟.jpg"/>
  
- <rect id="rect1" class="caja" width="512" height="74"/>
+ <rect id="rect1" class="caja" width="512" height="60"/>
  <text id="monogatari" y="20" xml:space="preserve">..<tspan class="a">pie</tspan> <tspan class="f">Y</tspan> pie in <tspan class="b">endurance</tspan> contest, <tspan class="d">gen</tspan>ghisKhan <tspan x="0" dy="22">elige <tspan class="f">FOLLOWER</tspan>s</tspan></text>
  <text class="h" transform="translate(10  480)" xml:space="preserve"><tspan id="tradi">跟</tspan></text>
  <text class="h" transform="translate(200 500)" xml:space="preserve"><tspan id="shinji"></tspan></text>
