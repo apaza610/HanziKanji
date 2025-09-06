@@ -9,6 +9,7 @@
 
     $newText = $_POST['divContent'];    // bla bla <span class='a'>bla</span>
     $newText = html_entity_decode($newText);
+    $newText = str_replace('<br>', '', $newText);               // svg doesnt understand br
     $newText = str_replace('<span', '<tspan', $newText);
     $newText = str_replace('/span>', '/tspan>', $newText);
     $newText = str_replace('<div>', '<tspan x="0" dy="22">', $newText);

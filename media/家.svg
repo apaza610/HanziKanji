@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+<style id="style1">@import url("estilosSVG.css");</style>
+<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="家.jpg"/>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="60"/>
+<text id="monogatari" y="20" xml:space="preserve">..en <tspan class="f">CASA</tspan> de <tspan class="d">ja</tspan>far el <tspan class="e">ca</tspan>rpintero repara el <tspan class="a">techo</tspan>, mientras<tspan x="0" dy="22">los <tspan class="b">cerditos </tspan>viven abajo</tspan></text>
+</g>
+
+<text class="h" transform="translate(10,  480)" xml:space="preserve"><tspan id="tradi">家</tspan></text>
+<text class="h" transform="translate(200, 500)" xml:space="preserve"><tspan id="shinji"></tspan></text>
+<text class="h" transform="translate(400, 480)" xml:space="preserve"><tspan id="simpli"></tspan></text>
+ 
+<a href="爱.svg" target="_blank"><rect x="462" y="462" width="50" height="50" fill="#4CAF50" opacity="0.2"/></a> 
+</svg>
