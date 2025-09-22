@@ -21,7 +21,8 @@ body {
     height: 75px;
     z-index: 5;
 }
-#clave1, #clave2, #clave3, #namae { max-width: 2rem; }
+#clave1, #clave2, #clave3, #glifo { max-width: 2rem; }
+#union {max-width: 4rem;}
 
 a { text-decoration: none; color: yellow;}
 

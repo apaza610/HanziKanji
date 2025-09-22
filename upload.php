@@ -57,9 +57,19 @@ if ($uploadOk == 0) {
 }
 
 // $salida = $target_dir . basename($_FILES["fileToUpload"]["name"], '.png') . '.jpg';
-$salida = $target_dir .$_POST['namae'].'.jpg';
+$salida = $target_dir .$_POST['union'].'.jpg';
 convertAndResize($target_file, $salida);
-echo "✅ conversion ha terminado";
+echo "✅ conversion ha terminado, comenzando Duplicacion...";
+
+foreach(mb_str_split($_POST['union']) as $char){
+  echo "<br> para ... " . $char;
+  copy($salida, $target_dir . $char . ".jpg");
+}
+if(unlink($salida)){    // borrando imagen vieja
+  echo "<br>File duplicated and original deleted";
+}else{
+  echo "<br>error deleting original file";
+}
 
 // convirtiendo imagenes a .jpg
 function convertAndResize($inputFile, $outputFile) {

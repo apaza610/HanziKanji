@@ -1,27 +1,19 @@
 let 物 = new XMLHttpRequest();
-let hanzi;
+let glifo, hanziHK, kanjiJP, hanziCN;
 
 function process(operacion){
+    llenarTextInputs();
     let img = new Image();
     
-    switch(parseInt(
-        document.querySelector('input[name="elector"]:checked').value
-    )){
-        case 0:
-            hanzi = document.getElementById("clave1").value.trim();
-            break;
-        case 1:
-            hanzi = document.getElementById("clave2").value.trim();
-            break;
-        case 2:
-            hanzi = document.getElementById("clave3").value.trim();
-            break;
-    }
+    glifo = document.getElementById("glifo").value.trim();      // ya sea hanzi o kanji 
+    hanziHK = document.getElementById("clave1").value.trim();
+    kanjiJP = document.getElementById("clave2").value.trim();
+    hanziCN = document.getElementById("clave3").value.trim();
 
-    if (hanzi === ""){
-        alert("olvidaste hanzi/kanji input!!");
-        return;
-    }
+    // if (hanzi === ""){
+    //     alert("olvidaste hanzi/kanji input!!");
+    //     return;
+    // }
     
     document.querySelectorAll('#cuento span').forEach(span => { //span vacios salen cortados en database
         if (span.textContent.trim() === ''){ span.remove(); }
@@ -30,19 +22,38 @@ function process(operacion){
     // console.log(cuento);
 
     img.onload = function(){
-        document.getElementById("principal").data = `media/${hanzi}.svg`;
+        document.getElementById("principal").data = `media/${glifo}.svg`;
     }
     img.onerror = function(){
         document.getElementById("principal").data = "media/0.svg";
     }
-    img.src = `media/${hanzi}.svg`;
+    img.src = `media/${glifo}.svg`;
 
     // --------------------------DataBase--------------------------------------
     if(物.readyState == 0 || 物.readyState == 4){
         // 車 = encodeURIComponent(document.getElementById("cuento").innerHTML);
-        物.open("GET", `conexionDB.php?kanji=${hanzi}&operacion=${operacion}&cuento=${cuento}`, true);
+        物.open("GET", `conexionDB.php?glifo=${glifo}&hanziHK=${hanziHK}&kanjiJP=${kanjiJP}&hanziCN=${hanziCN}&operacion=${operacion}&cuento=${cuento}`, true);
         物.onreadystatechange = handleServerResponse;
         物.send(null);
+    }
+}
+
+function llenarTextInputs(){
+    // console.log(fromJapnToTrad('遅'));       //迟遅遲
+    // console.log(fromJapnToSimp('遅'));
+    if( document.getElementById('clave1').value !== '' ){
+        document.getElementById('clave2').value = fromTradToJapn(document.getElementById('clave1').value);
+        document.getElementById('clave3').value = fromTradToSimp(document.getElementById('clave1').value);
+    }else if(document.getElementById('clave2').value !== ''){
+        document.getElementById('clave1').value = fromJapnToTrad(document.getElementById('clave2').value);
+        document.getElementById('clave3').value = fromJapnToSimp(document.getElementById('clave2').value);
+    }else{
+        document.getElementById('clave2').value = fromSimpToJapn(document.getElementById('clave3').value);
+        document.getElementById('clave1').value = fromSimpToTrad(document.getElementById('clave3').value);
+    }
+
+    if(document.getElementById('clave1').value === document.getElementById('clave2').value){
+        document.getElementById('clave2').value = '';
     }
 }
 
@@ -62,7 +73,7 @@ function handleServerResponse(){
 
 window.setTimeout(()=>{
     let params = new URLSearchParams(window.location.search);
-    document.getElementById("clave1").value = params.get("cosa");
+    document.getElementById("glifo").value = params.get("cosa");
 }, 300);
 
 window.setTimeout(()=>{         // si vienes de ANKI busqueda sera automatica
@@ -110,7 +121,7 @@ function mayusculas(){
 }
 
 function abrirSVG(){
-    document.getElementById("firefox").href = `media/svgEditor.html?valor=${hanzi}`;
+    document.getElementById("firefox").href = `media/svgEditor.html?valor=${glifo}`;
 }
 
 function splitLines() {
@@ -132,4 +143,25 @@ function limpiarGUI(){
 
 function refrescar(){
     document.getElementById("principal").data = `media/${hanzi}.svg?t=${Date.now()}`;
+}
+
+function copyDivContent() {
+    document.getElementById("divContent").value = document.getElementById("cuento").innerHTML; // or .innerText if only text
+    document.getElementById("clave2").value = document.getElementById("clave").value;
+}
+
+// Convert Traditional Chinese (Hong Kong) to Simplified Chinese (Mainland China)
+const fromTradToSimp = OpenCC.Converter({ from: 'hk', to: 'cn' });
+const fromTradToJapn = OpenCC.Converter({ from: 'hk', to: 'jp' });
+const fromSimpToTrad = OpenCC.Converter({ from: 'cn', to: 'hk' });
+const fromSimpToJapn = OpenCC.Converter({ from: 'cn', to: 'jp' });
+const fromJapnToTrad = OpenCC.Converter({ from: 'jp', to: 'hk' });
+const fromJapnToSimp = OpenCC.Converter({ from: 'jp', to: 'cn' });
+// console.log(converter('漢語')); // output: 汉语
+
+function copiarAqui(elemento){
+    document.getElementById("clave1").value = '';
+    document.getElementById("clave2").value = '';
+    document.getElementById("clave3").value = '';
+    elemento.value = document.getElementById("glifo").value;
 }
