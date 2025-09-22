@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <script src="main.js"></script>
-    <title>Document</title>
+    <title>Hanzi</title>
 </head>
 <body>
     <div id="mascara" style="width:10px; height:72px; background:black;"></div>
@@ -69,7 +69,8 @@
     <a href="https://hanzihero.com/simplified/characters/七">hanzihero</a>
 
     <form action="upload.php" method="post" enctype="multipart/form-data">
-        Imagen upload:
+        <input type="text" name="namae" id="namae" maxlength="2">
+        🖼️upload:
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Upload Image" name="submit">
     </form>
@@ -79,6 +80,10 @@
             document.getElementById("divContent").value = document.getElementById("cuento").innerHTML; // or .innerText if only text
             document.getElementById("clave2").value = document.getElementById("clave").value;
         }
+
+        setInterval(()=>{
+            document.getElementById("namae").value = document.getElementById("clave1").value;
+        }, 1000);
     </script>
 </body>
 </html>
