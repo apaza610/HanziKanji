@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+<style id="style1">@import url("estilosSVG.css");</style>
+<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="幾.jpg"/>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="74"/>
+<text id="monogatari" y="20" xml:space="preserve">..<tspan class="d">ji</tspan>ll is the <tspan class="c">人</tspan> teaching <tspan class="e">ki</tspan>ko:<tspan x="0" dy="22"><tspan class="f">CUANTOS</tspan> <tspan class="a">tiny</tspan> <tspan class="b">halberds</tspan> (agujas) tiene esto ?</tspan><tspan x="0" dy="22">hint: <tspan class="f">ALMOST </tspan>same as a jackar...</tspan></text>
+</g>
+
+<text class="h" transform="translate(10,  480)" xml:space="preserve"><tspan id="tradi">幾</tspan></text>
+<text class="h" transform="translate(200, 500)" xml:space="preserve"><tspan id="shinji"></tspan></text>
+<text class="h" transform="translate(400, 480)" xml:space="preserve"><tspan id="simpli">几</tspan></text>
+ 
+<a href="爱.svg" target="_blank"><rect x="462" y="462" width="50" height="50" fill="#4CAF50" opacity="0.2"/></a> 
+</svg>

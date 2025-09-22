@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+<style id="style1">@import url("estilosSVG.css");</style>
+<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="等.jpg"/>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="74"/>
+<text id="monogatari" y="20" xml:space="preserve">en china <tspan class="f">ESPERAN</tspan> al <tspan class="a">bambu</tspan> (<tspan class="d">deng</tspan>ue no importa)<tspan x="0" dy="22">en japon <tspan class="e">to</tspan>leran <tspan class="f">HASTAQUE </tspan>tengan <tspan class="f">GRADO </tspan>.. <tspan class="f">IGUAL</tspan> al</tspan><tspan x="0" dy="22"><tspan class="b">templo </tspan>y ya lo podan...</tspan></text>
+</g>
+
+<text class="h" transform="translate(10,  480)" xml:space="preserve"><tspan id="tradi">等</tspan></text>
+<text class="h" transform="translate(200, 500)" xml:space="preserve"><tspan id="shinji"></tspan></text>
+<text class="h" transform="translate(400, 480)" xml:space="preserve"><tspan id="simpli"></tspan></text>
+ 
+<a href="寺.svg" target="_blank"><rect x="40" y="440" width="50" height="80" fill="#4CAF50" opacity="0.2"/></a> 
+</svg>
