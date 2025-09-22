@@ -68,6 +68,12 @@
     <a href="https://www.wanikani.com/kanji/七">wanikani</a>,
     <a href="https://hanzihero.com/simplified/characters/七">hanzihero</a>
 
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        Imagen upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+    </form>
+
     <script>
         function copyDivContent() {
             document.getElementById("divContent").value = document.getElementById("cuento").innerHTML; // or .innerText if only text
