@@ -9,5 +9,5 @@
 <text class="h" transform="translate(10,  480)" xml:space="preserve"><tspan id="tradi">.</tspan></text>
 <text class="h" transform="translate(200, 500)" xml:space="preserve"><tspan id="shinji">.</tspan></text>
 <text class="h" transform="translate(400, 480)" xml:space="preserve"><tspan id="simpli">.</tspan></text>
-<a href="爱.svg" target="_blank"><rect x="500" y="420" width="50" height="80" fill="#4CAF50" opacity="0.2"/></a> 
+<a href="爱.svg" target="_blank"><rect id="a1" x="500" y="420" width="50" height="80" fill="#4CAF50" opacity="0.2"/></a> 
 </svg>

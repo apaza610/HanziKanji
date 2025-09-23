@@ -15,21 +15,27 @@
 
 <textarea id="editor" name="svgCode"></textarea>
 
-<button type="button" id="applyBtn">🔄 Apply Changes</button>
+<button type="button" id="applyBtn">🔄applyChanges</button>
 <form id="editorForm" method="post" action="save_svg.php" style="display: inline;">
   <input type="hidden" name="svgCode" id="hiddenSvgCode">
   <input type="hidden" name="valor" id="valor">
-  <button type="submit">💾 Save edited SVG</button>
+  <button type="submit">💾saveSVG</button>
 </form>
-rectangle id:
+rectangle⚓ id:
 <select id="box-selector">
   <option value="a1">a1</option>
   <option value="a2">a2</option>
   <option value="a3">a3</option>
   <option value="a4">a4</option>
+  <option value="a5">a5</option>
+  <option value="a6">a6</option>
+  <option value="a7">a7</option>
+  <option value="a8">a8</option>
 </select>
 ... 
-location: <span id="coordenadas">~~~</span> ... 
+<!-- location: <span id="coordenadas">~~~</span> ...  -->
+glyph <input type="text" name="glyph" id="glyph" placeholder="爱" style="width: 50px;">
+<button onclick="duplicarHiperlink()">Duplica⚓</button>
 <svg id="target"></svg>
 
 <script src="svgEditor.js"></script>

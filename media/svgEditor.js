@@ -39,20 +39,20 @@ fetch(`${valor}.svg`)
 
 // Render function
 function renderToTarget(code) {
-target.innerHTML = "";
-const parser = new DOMParser();
-const doc = parser.parseFromString(code, "image/svg+xml");
-const svgEl = doc.documentElement;
-if (!svgEl) return;
-// Copy attributes
-for (const attr of svgEl.attributes) target.setAttribute(attr.name, attr.value);
-// Copy children
-while (svgEl.firstChild) target.appendChild(svgEl.firstChild);
+    target.innerHTML = "";
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(code, "image/svg+xml");
+    const svgEl = doc.documentElement;
+    if (!svgEl) return;
+    // Copy attributes
+    for (const attr of svgEl.attributes) target.setAttribute(attr.name, attr.value);
+    // Copy children
+    while (svgEl.firstChild) target.appendChild(svgEl.firstChild);
 }
 
 // Apply button updates preview
 applyBtn.addEventListener("click", () => {
-renderToTarget(editor.value);
+    renderToTarget(editor.value);
 });
 
 // Before form submit → copy textarea value into hidden field
@@ -61,13 +61,13 @@ hiddenSvgCode.value = editor.value;
 });
 
 const element = document.getElementById('target');
+const selector = document.getElementById('box-selector');
 document.addEventListener( 'click', (e)=>{
     // console.log(`x: ${e.clientX} y: ${e.clientY}`);
     if (element.contains(e.target)) {
-        document.getElementById("coordenadas").innerText = `x="${e.offsetX}" y="${e.offsetY}"`;
+        // document.getElementById("coordenadas").innerText = `x="${e.offsetX}" y="${e.offsetY}"`;
         // console.log(`X: ${e.offsetX}, Y: ${e.offsetY}`);
-
-        const selector = document.getElementById('box-selector');
+        // const selector = document.getElementById('box-selector');
         // const selected = selector.value;
         const textArea = document.getElementById('editor');
         const text = textArea.value;
@@ -77,15 +77,16 @@ document.addEventListener( 'click', (e)=>{
         const newText = text.replace(regex, `rect id="${selector.value}" x="${e.offsetX}" y="${e.offsetY}" width=`);
         textArea.value = newText;
         // console.log(selected);
+        renderToTarget(newText);
     } 
 } );
 
-// document.querySelectorAll('a').forEach((link) => {
-//   link.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     const child = link.children[0];
-//     if (child && child.id) {
-//       console.log(child.id);
-//     }
-//   });
-// });
+function duplicarHiperlink(){
+    const text = editor.value;
+    const glifo = document.getElementById("glyph").value.trim();
+    // const line = `<a href="爱.svg" target="_blank"><rect id="${selector.value}" x="500" y="420" width="50" height="80" fill="#4CAF50" opacity="0.2"/></a>`;
+    // editor.value = text + '\n' + line;
+    const line = `<a href="${glifo}.svg" target="_blank"><rect id="${selector.value}" x="500" y="420" width="50" height="80" fill="#4CAF50" opacity="0.2"/></a>`;
+    const newText = text.replace('</svg>', `${line}\n</svg>`);
+    editor.value = newText;
+}
