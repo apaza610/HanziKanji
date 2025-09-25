@@ -9,41 +9,34 @@
 
     if($_GET['operacion'] == 'r'){
         $resultado = $mysqli->query("SELECT * FROM hanzi_list WHERE hanzi_glyph='".$_GET['glifo']."';");
+        $registro = mysqli_fetch_assoc($resultado);
+        echo htmlspecialchars($registro['hanzi_traduc'] . '|');
+        echo htmlspecialchars($registro['hanzi_radicals'] . '|');
+        echo htmlspecialchars($registro['hanzi_mnemon'] . '|');   // htmlspecialchars permite echo tags <i>abc</i> as text
+        // if($_GET['hanziHK'] == $_GET['glifo']){            }
         // echo $resultado -> num_rows;      // da 1  (a menos que haya multiples)
-        
-        $registro = mysqli_fetch_assoc($resultado);
-        echo htmlspecialchars($registro['hanzi_mnemon']);   // htmlspecialchars permite echo tags <i>abc</i> as text
-    }
-    elseif($_GET['operacion'] == 'w'){
+    }else{
         // $resultado = $mysqli->query("INSERT INTO hanzi_list VALUES ('".$_GET['glifo']."','','".$_GET['cuento']."');");
-        // $resultado = $mysqli->query("UPDATE hanzi_list SET hanzi_mnemon = '".$_GET['cuento']."' WHERE hanzi_glyph ='".$_GET['glifo']."';");
-        if($_GET['hanziHK'] != ''){
-            $resultado = $mysqli->query("
-                INSERT INTO hanzi_list (hanzi_glyph, hanzi_traduc, hanzi_mnemon)
-                VALUES ('".$_GET['hanziHK']."', '', '".$_GET['cuento']."')
-                ON DUPLICATE KEY UPDATE hanzi_mnemon = VALUES(hanzi_mnemon);
-            ");
-        }
-        if($_GET['kanjiJP'] != ''){
-            $resultado = $mysqli->query("
-                INSERT INTO hanzi_list (hanzi_glyph, hanzi_traduc, hanzi_mnemon)
-                VALUES ('".$_GET['kanjiJP']."', '', '".$_GET['cuento']."')
-                ON DUPLICATE KEY UPDATE hanzi_mnemon = VALUES(hanzi_mnemon);
-            ");
-        }
-        if($_GET['hanziCN'] != ''){
-            $resultado = $mysqli->query("
-                INSERT INTO hanzi_list (hanzi_glyph, hanzi_traduc, hanzi_mnemon)
-                VALUES ('".$_GET['hanziCN']."', '', '".$_GET['cuento']."')
-                ON DUPLICATE KEY UPDATE hanzi_mnemon = VALUES(hanzi_mnemon);
-            ");
-        }
-        
-        $registro = mysqli_fetch_assoc($resultado);
+        // $resultado = $mysqli->query("UPDATE hanzi_list SET hanzi_mnemon = '".$_GET['cuento']."' WHERE hanzi_glyph ='".$_GET['hanziHK']."';");
+        // $resultado = $mysqli->query("UPDATE hanzi_list 
+        //                             SET hanzi_mnemon = 'est es un cuento',
+        //                                 hanzi_traduc = 'jajaja',
+        //                                 hanzi_radicals = '123'
+        //                             WHERE hanzi_glyph ='遲';
+        //                             ");
+        $cuento = $mysqli->real_escape_string($_GET['cuento']);
+        $trad = $mysqli->real_escape_string($_GET['trad']);
+        $radi = $mysqli->real_escape_string($_GET['radi']);
+        $glifo = $mysqli->real_escape_string($_GET['glifo']);
+        $resultado = $mysqli->query("UPDATE hanzi_list 
+                                    SET hanzi_mnemon = '$cuento',
+                                        hanzi_traduc = '$trad',
+                                        hanzi_radicals = '$radi'
+                                    WHERE hanzi_glyph ='$glifo';
+                                    ");
+        // $registro = mysqli_fetch_assoc($resultado);
         // echo $registro['hanzi_mnemon'];   // arbol
-        // echo "ha sido escrito";
     }
-
     $mysqli->close();
     echo '</response>';
 ?>

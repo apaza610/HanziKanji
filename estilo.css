@@ -21,10 +21,23 @@ body {
     height: 75px;
     z-index: 5;
 }
-#clave1, #clave2, #clave3, #glifo { max-width: 2rem; }
+.claves {max-width: 1rem;}
 #union {max-width: 4rem;}
 
 a { text-decoration: none; color: yellow;}
+
+table {text-align: center;
+    table-layout: fixed;
+    max-width: 512px;
+}
+.trad {width: 6rem; text-align: center;}
+.rads {width: 6rem; text-align: center;}
+
+#principal {
+        margin: 0; padding: 0;
+        width: 512px;
+        height: 512px;
+    }
 
 /* Styles for mobile browsers */
 @media (pointer:none), (pointer:coarse) { 

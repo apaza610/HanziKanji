@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-<style id="style1">@import url("estilosSVG.css");</style>
-<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="試.jpg"/>
- 
- <rect id="rect1" class="caja" width="512" height="74"/>
- <text id="monogatari" y="20" xml:space="preserve">....in <tspan class="f">EXAMEN </tspan><tspan class="d">she </tspan><tspan class="a">speaks </tspan>explaining  how to do<tspan x="0" dy="20"> the <tspan class="b">ritual</tspan>.</tspan></text>
- <text class="h" transform="translate(10  480)" xml:space="preserve"><tspan id="tradi">試</tspan></text>
- <text class="h" transform="translate(200 500)" xml:space="preserve"><tspan id="shinji"></tspan></text>
- <text class="h" transform="translate(400 480)" xml:space="preserve"><tspan id="simpli">试</tspan></text>
- 
- </svg>
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve"><style id="style1">@import url("estilosSVG.css");</style><image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="試.jpg"/><rect id="rect1" class="caja" width="512" height="74"/><text id="monogatari" y="20" xml:space="preserve">....in <tspan class="f">EXAMEN </tspan><tspan class="d">she </tspan><tspan class="a">speaks </tspan>explaining  how to do<tspan x="0" dy="20"> the <tspan class="b">ritual</tspan>.</tspan></text><text class="h" id="tradi" transform="translate(10, 480)">試</text><text class="h" id="shinji" transform="translate(200, 500)">.</text><text class="h" id="simpli" transform="translate(400, 480)">试</text><a href="式.svg" target="_blank"><rect x="40" y="420" width="50" height="50" opacity="0.4"/></a></svg>

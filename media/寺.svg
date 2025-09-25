@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-<style id="style1">@import url("estilosSVG.css");</style>
-<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="寺.jpg"/>
- 
- <rect id="rect1" class="caja" width="512" height="60"/>
- <text id="monogatari" y="20" xml:space="preserve">..金閣寺 parece <tspan class="d">c</tspan><tspan class="e">j</tspan>, el <tspan class="f">TEMPLO </tspan>se alza sobre un <tspan class="a">terreno </tspan><tspan x="0" dy="22">hermoso y tiene <tspan class="b">pegado</tspan>s paneles de oro..</tspan></text>
- <text class="h" transform="translate(10  480)" xml:space="preserve"><tspan id="tradi">寺</tspan></text>
- <text class="h" transform="translate(200 500)" xml:space="preserve"><tspan id="shinji"></tspan></text>
- <text class="h" transform="translate(400 480)" xml:space="preserve"><tspan id="simpli"></tspan></text>
- 
- </svg>
+<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve"><style id="style1">@import url("estilosSVG.css");</style><image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="寺.jpg"/><rect id="rect1" class="caja" width="512" height="60"/><text id="monogatari" y="20" xml:space="preserve">..金閣寺 parece <tspan class="d">c</tspan><tspan class="e">j</tspan>, el <tspan class="f">TEMPLO </tspan>se alza sobre un <tspan class="a">terreno </tspan><tspan x="0" dy="22">hermoso y tiene <tspan class="b">pegado</tspan>s paneles de oro..</tspan></text><text class="h" id="tradi" transform="translate(10, 480)">寺</text><text class="h" id="shinji" transform="translate(200, 500)">.</text><text class="h" id="simpli" transform="translate(400, 480)">.</text></svg>

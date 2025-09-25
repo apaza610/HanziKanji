@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    
     <script src="https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.min.js"></script>
     <title>Hanzi</title>
 </head>
@@ -13,26 +12,19 @@
     <div id="cuento" contenteditable="true" >..</div>
     
     <form action="writeToSVG.php" method="post" onsubmit="copyDivContent()">
-        <table>
+        <table border="1">
         <tr>
-            <td>
-                <img src="extras/eraser.svg" width="20" onmouseover="limpiarGUI()">
-                <button type="button" id="btnLeer" onclick="process('r')">DB🔎</button>
-                <button type="button" onclick="process('w')">DB✒️</button>
-            </td>
-            <td>
+            <td colspan="3">
+                <img src="extras/eraser.svg" width="20" onclick="limpiarGUI()">
                 <button type="button" onclick="refrescar()">SVG↻</button>
                 <button type="submit">SVG✒️</button>
                 <a id="firefox" href="https://www.blendernation.com/" onclick="abrirSVG()">SVGedit</a>
             </td>
         </tr>
         <tr>
-            <td><input type="hidden" name="divContent" id="divContent">
-                <input type="text" name="clave1" id="clave1" maxlength="6" placeholder="chS" onclick="copiarAqui(this)">
-                <input type="text" name="clave2" id="clave2" maxlength="6" placeholder="jpn" onclick="copiarAqui(this)">
-                <input type="text" name="clave3" id="clave3" maxlength="6" placeholder="chT" onclick="copiarAqui(this)">
-            </td>
-            <td>
+            <td colspan="3">
+                <input type="hidden" name="divContent" id="divContent">
+                <button type="button" onclick="averiguarFormas()">📖</button>
                 <button type="button" onclick="estilizar('a')" style="color: red;">■</button>
                 <button type="button" onclick="estilizar('b')" style="color: limegreen;">■</button>
                 <button type="button" onclick="estilizar('c')" style="color: blue;">■</button>
@@ -41,26 +33,62 @@
                 <button type="button" onclick="estilizar('e')"><img src="extras/JPN.svg" width="20" ></button>
             </td>
         </tr>
+        <tr>
+            <td>
+                <input type="text" class="claves" name="clave1" id="clave1" maxlength="6" placeholder="hk" onclick="copiarAqui(this)">                
+                <button type="button" id="btnLeer" onclick="process('r',1)">🔎</button>
+                <button type="button" onclick="process('w',1)">💾</button>
+            </td>
+            <td>
+                <input type="text" class="claves" name="clave2" id="clave2" maxlength="6" placeholder="jp" onclick="copiarAqui(this)">
+                <button type="button" id="btnLeer" onclick="process('r',2)">🔎</button>
+                <button type="button" onclick="process('w',2)">💾</button>
+            </td>
+            <td>
+                <input type="text" class="claves" name="clave3" id="clave3" maxlength="6" placeholder="ch" onclick="copiarAqui(this)">
+                <button type="button" id="btnLeer" onclick="process('r',3)">🔎</button>
+                <button type="button" onclick="process('w',3)">💾</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+            <input type="text" class="trad" name="trad1" id="trad1">
+            <input type="text" class="trad" name="trad2" id="trad2">
+            <input type="text" class="trad" name="trad3" id="trad3">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+            <input type="text" class="rads" name="rads1" id="rads1">
+            <input type="text" class="rads" name="rads2" id="rads2">
+            <input type="text" class="rads" name="rads3" id="rads3">
+            </td>
+        </tr>
+        <tr>
+            <td id="ancla1">~~</td>
+            <td id="ancla2">~~</td>
+            <td id="ancla3">~~</td>
+        </tr>
         </table>
     </form>
     
-    <object type="" data="media/上.svg" id="principal">
+        <object type="" data="media/上.svg" id="principal" name="principal">
         Tu browser no soporta SVG.
     </object>
     <br>
 
     <form action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="text" name="glifo" id="glifo" maxlength="3">
-        🖼️upload:
         <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload" name="submit">
-        <input type="text" name="union" id="union">
+        <input type="submit" value="↑" name="submit">
+        <input name="glifo" id="glifo" maxlength="3" placeholder="字" style="width: 2rem;">
+        <input type="hidden" name="union" id="union" placeholder="union">
     </form>
 
     <script src="main.js"></script>
     <script>
         setInterval(()=>{
-            document.getElementById("union").value = document.getElementById("clave1").value + document.getElementById("clave2").value +document.getElementById("clave3").value;
+            let cadena = document.getElementById("clave1").value + document.getElementById("clave2").value +document.getElementById("clave3").value;
+            document.getElementById("union").value = [...new Set(cadena)].join("");     // evitar glifos repetidos
         }, 1000);
     </script>
 

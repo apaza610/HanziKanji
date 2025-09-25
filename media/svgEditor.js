@@ -3,14 +3,15 @@ const editor = document.getElementById("editor");
 const applyBtn = document.getElementById("applyBtn");
 const hiddenSvgCode = document.getElementById("hiddenSvgCode");
 
-// Get the "valor" parameter from the URL
+// Get the "glifo" parameter from the URL
 const params = new URLSearchParams(window.location.search);
-const valor = params.get("valor");
+const glifos = params.get("valor");          // 遲遅迟
+let glifo = glifos.split('')[0];
 
-if (valor) {
-const filePath = `${valor}.svg`;
+if (glifo) {
+const filePath = `${glifo}.svg`;
 
-document.getElementById("valor").value = valor;
+document.getElementById("glifos").value = glifos;
 
 fetch(filePath)
     .then(response => {
@@ -29,7 +30,7 @@ document.getElementById("target").textContent = "⚠️ No 'valor' parameter fou
 
 
 // Load 0.svg into textarea on startup
-fetch(`${valor}.svg`)
+fetch(`${glifo}.svg`)
 .then(res => res.text())
 .then(svgText => {
     editor.value = svgText;
@@ -65,16 +66,12 @@ const selector = document.getElementById('box-selector');
 document.addEventListener( 'click', (e)=>{
     // console.log(`x: ${e.clientX} y: ${e.clientY}`);
     if (element.contains(e.target)) {
-        // document.getElementById("coordenadas").innerText = `x="${e.offsetX}" y="${e.offsetY}"`;
-        // console.log(`X: ${e.offsetX}, Y: ${e.offsetY}`);
-        // const selector = document.getElementById('box-selector');
-        // const selected = selector.value;
         const textArea = document.getElementById('editor');
         const text = textArea.value;
         // const newText = text.replace(/rect id="a1" x="\d+" y="\d+" width=/g, `rect id="${selector.value}" x="${e.offsetX}" y="${e.offsetY}" width=`);
         const idValue = selector.value; // Replace with your variable
-        const regex = new RegExp(`rect id="${idValue}" x="\\d+" y="\\d+" width=`, 'g');
-        const newText = text.replace(regex, `rect id="${selector.value}" x="${e.offsetX}" y="${e.offsetY}" width=`);
+        const regex = new RegExp(`circle id="${idValue}" cx="\\d+" cy="\\d+"`, 'g');
+        const newText = text.replace(regex, `circle id="${selector.value}" cx="${e.offsetX}" cy="${e.offsetY}"`);
         textArea.value = newText;
         // console.log(selected);
         renderToTarget(newText);
@@ -86,7 +83,7 @@ function duplicarHiperlink(){
     const glifo = document.getElementById("glyph").value.trim();
     // const line = `<a href="爱.svg" target="_blank"><rect id="${selector.value}" x="500" y="420" width="50" height="80" fill="#4CAF50" opacity="0.2"/></a>`;
     // editor.value = text + '\n' + line;
-    const line = `<a href="${glifo}.svg" target="_blank"><rect id="${selector.value}" x="500" y="420" width="50" height="80" fill="#4CAF50" opacity="0.2"/></a>`;
+    const line = `<a href="${glifo}.svg" target="_blank"><circle id="${selector.value}" cx="200" cy="200" r="20"/></a>`;
     const newText = text.replace('</svg>', `${line}\n</svg>`);
     editor.value = newText;
 }

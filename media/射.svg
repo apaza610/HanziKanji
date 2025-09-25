@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="射.jpg"/>
@@ -7,10 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="60"/>
 <text id="monogatari" y="20" xml:space="preserve">..<tspan class="d">she</tspan>rlock <tspan class="a">mide </tspan>profundidad del <tspan class="f">DISPARO </tspan>en el <tspan class="b">cuerpo</tspan><tspan x="0" dy="22">de una gei<tspan class="e">sha</tspan>..</tspan></text>
 </g>
-
-<text class="h" transform="translate(10,  480)" xml:space="preserve"><tspan id="tradi">射</tspan></text>
-<text class="h" transform="translate(200, 500)" xml:space="preserve"><tspan id="shinji"></tspan></text>
-<text class="h" transform="translate(400, 480)" xml:space="preserve"><tspan id="simpli"></tspan></text>
- 
-<a href="爱.svg" target="_blank"><rect x="500" y="500" width="50" height="50" fill="#4CAF50" opacity="0.2"/></a> 
+<text class="h" id="tradi" transform="translate(10, 480)">射</text>
+<text class="h" id="shinji" transform="translate(200,, 500)">.</text>
+<text class="h" id="simpli" transform="translate(400,, 480)">.</text>
 </svg>

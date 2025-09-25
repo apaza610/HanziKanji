@@ -18,10 +18,10 @@
 <button type="button" id="applyBtn">🔄applyChanges</button>
 <form id="editorForm" method="post" action="save_svg.php" style="display: inline;">
   <input type="hidden" name="svgCode" id="hiddenSvgCode">
-  <input type="hidden" name="valor" id="valor">
+  <input name="glifos" id="glifos" style="width: 50px;">
   <button type="submit">💾saveSVG</button>
 </form>
-rectangle⚓ id:
+.....Rectangle⚓ id:
 <select id="box-selector">
   <option value="a1">a1</option>
   <option value="a2">a2</option>
@@ -34,8 +34,8 @@ rectangle⚓ id:
 </select>
 ... 
 <!-- location: <span id="coordenadas">~~~</span> ...  -->
-glyph <input type="text" name="glyph" id="glyph" placeholder="爱" style="width: 50px;">
-<button onclick="duplicarHiperlink()">Duplica⚓</button>
+radical:<input type="text" name="glyph" id="glyph" placeholder="尺" style="width: 50px;">
+<button onclick="duplicarHiperlink()">Crear⚓</button>
 <svg id="target"></svg>
 
 <script src="svgEditor.js"></script>

@@ -1,9 +1,21 @@
+@font-face { font-family: 'Source Han Sans CN Light';
+    src: url('Source Han Sans CN Light.otf');
+}
+text, tspan {font-family: "Source Han Sans CN Light";}
 .caja { fill: #393939; opacity: 0.8;}
-#monogatari { fill: gray; font-family: Arial, Helvetica, sans-serif; font-size: 20px; inline-size: 512px;}
+
 .a { fill: red;}
 .b { fill: limegreen;}
 .c { fill: blue;}
 .d { fill: white; font-weight: bold;}
 .e { fill: black; font-weight: bold;}
 .f { fill: fuchsia;}
-.h { fill: yellow; font-size: 72px; font-family: 'Times New Roman', Times, serif;}
+.h { fill: whitesmoke; font-size: 72px;}
+#monogatari { fill: gray; font-size: 20px; inline-size: 512px;}
+
+circle {
+    fill: yellow;
+    stroke: blue;
+    stroke-width: 2;
+    opacity: .2;
+}

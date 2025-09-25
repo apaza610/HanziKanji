@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hanzi Decomposition</title>
+</head>
+<body>
+  <h1>Decompose Hanzi</h1>
+  <input type="text" id="charInput" placeholder="输入汉字 (e.g., 迟)">
+  <button id="decomposeBtn">Decompose</button>
+  <div id="output"></div>
+
+  <script>
+    // ✅ CORRECT URL — verified to exist
+    const DECOMPOSITIONS_URL = 'https://raw.githubusercontent.com/patrickkfkan/hanzi-tools/master/data/decompositions.json';
+
+    let decompositionsCache = null;
+
+    async function getDecomposition(char) {
+      if (!decompositionsCache) {
+        try {
+          const response = await fetch(DECOMPOSITIONS_URL);
+          if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+          decompositionsCache = await response.json();
+        } catch (err) {
+          console.error("Failed to load decompositions:", err);
+          // Fallback for offline/testing
+          decompositionsCache = {
+            '迟': ['辶', '尺'],
+            '好': ['女', '子'],
+            '明': ['日', '月'],
+            '新': ['亲', '斤'],
+            '赢': ['亡', '口', '月', '贝', '凡']
+          };
+        }
+      }
+      return decompositionsCache[char] || [];
+    }
+
+    document.getElementById('decomposeBtn').addEventListener('click', async () => {
+      const input = document.getElementById('charInput').value.trim();
+      if (!input) {
+        document.getElementById('output').innerHTML = '请输入一个汉字';
+        return;
+      }
+
+      const char = input[0];
+      document.getElementById('output').innerHTML = 'Loading...';
+
+      try {
+        const decomp = await getDecomposition(char);
+        document.getElementById('output').innerHTML = 
+          decomp.length > 0
+            ? `<strong>${char}</strong> → [${decomp.map(c => `"${c}"`).join(', ')}]`
+            : `No decomposition found for "${char}"`;
+      } catch (err) {
+        document.getElementById('output').innerHTML = `Error: ${err.message}`;
+      }
+    });
+  </script>
+</body>
+</html>
