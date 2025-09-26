@@ -8,6 +8,11 @@
 </head>
 <body>
 <?php
+// Habilitar la notificación de errores para depuración
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+mb_internal_encoding('UTF-8');
+
 $target_dir = "media/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -25,21 +30,8 @@ if(isset($_POST["submit"])) {
   }
 }
 
-// Check if file already exists
-// if (file_exists($target_file)) {
-//   echo "Sorry, file already exists.";
-//   $uploadOk = 0;
-// }
-
-// Check file size
-// if ($_FILES["fileToUpload"]["size"] > 500000) {
-//   echo "Sorry, your file is too large.";
-//   $uploadOk = 0;
-// }
-
 // Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
   echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
   $uploadOk = 0;
 }
@@ -56,7 +48,6 @@ if ($uploadOk == 0) {
   }
 }
 
-// $salida = $target_dir . basename($_FILES["fileToUpload"]["name"], '.png') . '.jpg';
 $salida = $target_dir .$_POST['union'].'.jpg';
 convertAndResize($target_file, $salida);
 echo "✅ conversion ha terminado, comenzando Duplicacion...";
@@ -65,15 +56,30 @@ foreach(mb_str_split($_POST['union']) as $char){
   echo "<br> para ... " . $char;
   copy($salida, $target_dir . $char . ".jpg");
 }
-if(unlink($salida)){    // borrando imagen vieja
-  echo "<br>File duplicated and original deleted";
-}else{
-  echo "<br>error deleting original file";
+
+if (mb_strlen($_POST['union']) > 1) {
+    if(unlink($salida)){    // borrando imagen vieja
+      echo "<br>File duplicated and original deleted";
+    }else{
+      echo "<br>error deleting original file";
+    }
 }
 
 // convirtiendo imagenes a .jpg
 function convertAndResize($inputFile, $outputFile) {
-    $imagick = new Imagick($inputFile);
+    echo "<br>--------------de: " . $inputFile . " a: " . $outputFile . "--------------";
+    
+    if (!file_exists($inputFile)) {
+        echo "<br>ERROR: El archivo de entrada no existe: " . $inputFile;
+        return;
+    }
+
+    try {
+        $imagick = new Imagick($inputFile);
+    } catch (ImagickException $e) {
+        echo "<br>Error al leer la imagen de entrada: " . $e->getMessage();
+        return;
+    }
 
     $imagick = $imagick->flattenImages();   // flatten layers of PSDs or PNPGs with transparency
 
@@ -84,11 +90,28 @@ function convertAndResize($inputFile, $outputFile) {
     $imagick->setImageFormat("jpg");        // Set format and quality
     $imagick->setImageCompressionQuality(85);
 
-    $success = $imagick->writeImage($outputFile);   // write to file
-    if ($success && file_exists($outputFile)) {
-        if (file_exists($inputFile)) {
-            unlink($inputFile);           // delete original file
+    try {
+        $success = $imagick->writeImage($outputFile);   // write to file
+    } catch (ImagickException $e) {
+        echo "<br>Error al escribir la imagen: " . $e->getMessage();
+        $success = false;
+    }
+
+    if ($success) {
+        echo "<br>writeImage() tuvo exito.";
+        if (file_exists($outputFile)) {
+            echo "<br>El archivo de salida existe: " . $outputFile;
+            if (file_exists($inputFile)) {
+                unlink($inputFile);           // delete original file
+                echo "<br>Archivo original eliminado: " . $inputFile;
+            } else {
+                echo "<br>No se encontro el archivo original para eliminar: " . $inputFile;
+            }
+        } else {
+            echo "<br>ERROR: El archivo de salida NO existe despues de writeImage(): " . $outputFile;
         }
+    } else {
+        echo "<br>ERROR: writeImage() fallo.";
     }
 
     $imagick->clear();        // clean up

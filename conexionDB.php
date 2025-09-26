@@ -18,22 +18,24 @@
     }else{
         // $resultado = $mysqli->query("INSERT INTO hanzi_list VALUES ('".$_GET['glifo']."','','".$_GET['cuento']."');");
         // $resultado = $mysqli->query("UPDATE hanzi_list SET hanzi_mnemon = '".$_GET['cuento']."' WHERE hanzi_glyph ='".$_GET['hanziHK']."';");
-        // $resultado = $mysqli->query("UPDATE hanzi_list 
-        //                             SET hanzi_mnemon = 'est es un cuento',
-        //                                 hanzi_traduc = 'jajaja',
-        //                                 hanzi_radicals = '123'
-        //                             WHERE hanzi_glyph ='遲';
-        //                             ");
         $cuento = $mysqli->real_escape_string($_GET['cuento']);
         $trad = $mysqli->real_escape_string($_GET['trad']);
         $radi = $mysqli->real_escape_string($_GET['radi']);
         $glifo = $mysqli->real_escape_string($_GET['glifo']);
-        $resultado = $mysqli->query("UPDATE hanzi_list 
-                                    SET hanzi_mnemon = '$cuento',
-                                        hanzi_traduc = '$trad',
-                                        hanzi_radicals = '$radi'
-                                    WHERE hanzi_glyph ='$glifo';
-                                    ");
+        // $resultado = $mysqli->query("UPDATE hanzi_list 
+        //                             SET hanzi_mnemon = '$cuento',
+        //                                 hanzi_traduc = '$trad',
+        //                                 hanzi_radicals = '$radi'
+        //                             WHERE hanzi_glyph ='$glifo';
+        //                             ");
+        $query = "INSERT INTO hanzi_list (hanzi_glyph, hanzi_mnemon, hanzi_traduc, hanzi_radicals)
+                VALUES ('$glifo', '$cuento', '$trad', '$radi')
+                ON DUPLICATE KEY UPDATE
+                hanzi_mnemon = VALUES(hanzi_mnemon),
+                hanzi_traduc = VALUES(hanzi_traduc),
+                hanzi_radicals = VALUES(hanzi_radicals)";
+
+        $mysqli->query($query);
         // $registro = mysqli_fetch_assoc($resultado);
         // echo $registro['hanzi_mnemon'];   // arbol
     }

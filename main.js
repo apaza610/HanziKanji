@@ -42,11 +42,6 @@ function process(operacion, indice){
     // --------------------------DataBase--------------------------------------
     if(物.readyState == 0 || 物.readyState == 4){
         // 車 = encodeURIComponent(document.getElementById("cuento").innerHTML);
-        // 物.open("GET", `conexionDB.php?glifo=${glifo}
-        //     &hanziHK=${hanziHK}&kanjiJP=${kanjiJP}&hanziCN=${hanziCN}
-        //     &operacion=${operacion}&cuento=${cuento}
-        //     &trad1=${trad1}&trad2=${trad2}&trad3=${trad3}
-        //     &rads1=${rads1}&rads2=${rads2}&rads3=${rads3}`, true);
         switch (iEsimo) {
             case 1:
                 物.open("GET", `conexionDB.php?glifo=${hanziHK}&operacion=${operacion}&cuento=${cuento}&trad=${trad1}&radi=${rads1}`, true);
@@ -74,17 +69,14 @@ function handleServerResponse(){
             
             switch (iEsimo) {
                 case 1:
-                    console.log("Bolivia");
                     document.getElementById('trad1').value = partes[0];
                     document.getElementById('rads1').value = partes[1];
                     break;
                 case 2:
-                    console.log("ARGentina");
                     document.getElementById('trad2').value = partes[0];
                     document.getElementById('rads2').value = partes[1];
                     break;
                 case 3:
-                    console.log("Peru");
                     document.getElementById('trad3').value = partes[0];
                     document.getElementById('rads3').value = partes[1];
                     break;
@@ -207,29 +199,52 @@ function copiarAqui(elemento){
     puedeCopiar = false;
 }
 
-function averiguarFormas(){
-    if( document.getElementById('clave1').value !== '' ){
-        document.getElementById('clave2').value = fromTradToJapn(document.getElementById('clave1').value);
-        document.getElementById('clave3').value = fromTradToSimp(document.getElementById('clave1').value);
-    }
-    if(document.getElementById('clave2').value !== ''){
-        document.getElementById('clave1').value = fromJapnToTrad(document.getElementById('clave2').value);
-        document.getElementById('clave3').value = fromJapnToSimp(document.getElementById('clave2').value);
-    }
-    if(document.getElementById('clave3').value !== ''){
-        document.getElementById('clave2').value = fromSimpToJapn(document.getElementById('clave3').value);
-        document.getElementById('clave1').value = fromSimpToTrad(document.getElementById('clave3').value);
+function averiguarFormas() {
+    const c1 = document.getElementById('clave1');
+    const c2 = document.getElementById('clave2');
+    const c3 = document.getElementById('clave3');
+
+    let v1, v2, v3;
+
+    // Use if-else-if to prevent overwriting values.
+    // The first non-empty field determines the values for the others.
+    if (c1.value !== '') {
+        v1 = c1.value;
+        v2 = fromTradToJapn(c1.value);
+        v3 = fromTradToSimp(c1.value);
+    } else if (c2.value !== '') {
+        v1 = fromJapnToTrad(c2.value);
+        v2 = c2.value;
+        v3 = fromJapnToSimp(c2.value);
+    } else if (c3.value !== '') {
+        v1 = fromSimpToTrad(c3.value);
+        v2 = fromSimpToJapn(c3.value);
+        v3 = c3.value;
+    } else {
+        return; // All fields are empty.
     }
 
-    if(document.getElementById('clave1').value === document.getElementById('clave2').value && document.getElementById('clave2').value === document.getElementById('clave3').value){
-        alert("3 glifos identicos");
+    // Use a Set to track seen glyphs and avoid duplicates.
+    const seenGlyphs = new Set();
+
+    c1.value = v1;
+    seenGlyphs.add(v1);
+
+    if (seenGlyphs.has(v2)) {
+        c2.value = '';
+    } else {
+        c2.value = v2;
+        seenGlyphs.add(v2);
     }
-    else if(document.getElementById('clave1').value === document.getElementById('clave2').value){
-        alert("ChinoTradicional y Japones identicos");
+
+    if (seenGlyphs.has(v3)) {
+        c3.value = '';
+    } else {
+        c3.value = v3;
+        seenGlyphs.add(v3);
     }
-    else if(document.getElementById('clave2').value === document.getElementById('clave3').value){
-        alert("Japones y ChinoSimplificado identicos");
-    }
+
+    // The old alert logic is no longer valid as we are removing duplicates.
 }
 
 // function llenarTextInputs(){
