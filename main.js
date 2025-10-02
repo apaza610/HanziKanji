@@ -168,6 +168,13 @@ function limpiarGUI(){
     document.getElementById("clave3").value = "";
     document.getElementById("cuento").innerHTML = "..";
     document.getElementById("principal").data = "media/0.svg";
+    document.getElementById("trad1").value = "";
+    document.getElementById("trad2").value = "";
+    document.getElementById("trad3").value = "";
+    document.getElementById("rads1").value = "";
+    document.getElementById("rads2").value = "";
+    document.getElementById("rads3").value = "";
+    updateAnclas();
     puedeCopiar = true;
 }
 

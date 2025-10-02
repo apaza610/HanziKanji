@@ -1,125 +1,194 @@
+<?php
+
+// Main entry point for the upload process.
+// This function will orchestrate the validation, processing, and final output.
+function handleImageUpload()
+{
+    // 1. Configuration
+    $targetDir = "media/";
+    $allowedFormats = ["jpg", "png", "jpeg", "gif"];
+
+    // Use a try-catch block for clean error handling.
+    try {
+        // 2. Validate the upload
+        if (empty($_FILES["fileToUpload"])) {
+            throw new RuntimeException('No file was uploaded.');
+        }
+        $uploadedFile = $_FILES["fileToUpload"];
+        $tempPath = validateUploadedFile($uploadedFile, $allowedFormats);
+
+        // 3. Get the 'union' string for naming files.
+        if (empty($_POST['union'])) {
+            throw new RuntimeException('The "union" parameter is required.');
+        }
+        $union = $_POST['union'];
+        mb_internal_encoding('UTF-8');
+
+        // 4. Process the image: move, convert, and resize.
+        $tempImageName = $targetDir . basename($uploadedFile["name"]);
+        if (!move_uploaded_file($tempPath, $tempImageName)) {
+            throw new RuntimeException('Failed to move uploaded file.');
+        }
+
+        $baseName = $targetDir . $union . '.jpg';
+        processImage($tempImageName, $baseName);
+
+        // 5. Duplicate files if needed and gather final paths.
+        $finalImagePaths = duplicateAndCleanup($baseName, $union, $targetDir);
+
+        // 6. Render the success response.
+        renderSuccess($finalImagePaths);
+
+    } catch (RuntimeException $e) {
+        // Render an error response if anything goes wrong.
+        renderError($e->getMessage());
+    }
+}
+
+/**
+ * Validates the uploaded file against a set of rules.
+ *
+ * @param array $file The $_FILES entry for the upload.
+ * @param array $allowedFormats A list of allowed file extensions.
+ * @return string The temporary path of the validated file.
+ * @throws RuntimeException If the file is invalid.
+ */
+function validateUploadedFile(array $file, array $allowedFormats): string
+{
+    // Check for upload errors
+    if ($file['error'] !== UPLOAD_ERR_OK) {
+        throw new RuntimeException('File upload error: ' . $file['error']);
+    }
+
+    // Check if it's a real image
+    $tempPath = $file['tmp_name'];
+    if (!getimagesize($tempPath)) {
+        throw new RuntimeException('File is not a valid image.');
+    }
+
+    // Check file format
+    $imageFileType = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+    if (!in_array($imageFileType, $allowedFormats)) {
+        throw new RuntimeException('Sorry, only ' . implode(', ', $allowedFormats) . ' files are allowed.');
+    }
+
+    return $tempPath;
+}
+
+/**
+ * Converts, resizes, and saves the uploaded image.
+ *
+ * @param string $inputFile The path to the source image.
+ * @param string $outputFile The path to save the processed image.
+ * @throws ImagickException
+ */
+function processImage(string $inputFile, string $outputFile)
+{
+    if (!file_exists($inputFile)) {
+        throw new RuntimeException('Input file for processing does not exist: ' . $inputFile);
+    }
+
+    $imagick = new Imagick($inputFile);
+    $imagick->flattenImages();
+    $imagick->scaleImage(512, 512, true);
+    $imagick->cropThumbnailImage(512, 512);
+    $imagick->setImageFormat("jpg");
+    $imagick->setImageCompressionQuality(85);
+
+    // Overwrite if exists
+    if (file_exists($outputFile)) {
+        unlink($outputFile);
+    }
+
+    if (!$imagick->writeImage($outputFile)) {
+        throw new RuntimeException('Failed to write processed image to ' . $outputFile);
+    }
+
+    $imagick->clear();
+    $imagick->destroy();
+
+    // Delete the original temporary file
+    if (file_exists($inputFile)) {
+        unlink($inputFile);
+    }
+}
+
+/**
+ * Duplicates the processed image for each character in the union string.
+ *
+ * @param string $sourceImage The base image to copy from.
+ * @param string $union The string of characters.
+ * @param string $targetDir The directory to save the copies.
+ * @return array A list of paths to the final created images.
+ */
+function duplicateAndCleanup(string $sourceImage, string $union, string $targetDir): array
+{
+    $finalImagePaths = [];
+    $unionChars = mb_str_split($union);
+    $isMultiChar = count($unionChars) > 1;
+
+    if ($isMultiChar) {
+        // For multiple characters, copy the source to each character's file.
+        foreach ($unionChars as $char) {
+            $destination = $targetDir . $char . '.jpg';
+            if (copy($sourceImage, $destination)) {
+                $finalImagePaths[] = $destination;
+            }
+        }
+        // Delete the temporary composite source image.
+        unlink($sourceImage);
+    } else {
+        // For a single character, the source image is the final image.
+        $finalImagePaths[] = $sourceImage;
+    }
+
+    return $finalImagePaths;
+}
+
+/**
+ * Renders a success HTML page with links to the created images.
+ *
+ * @param array $imagePaths List of paths to the final images.
+ */
+function renderSuccess(array $imagePaths)
+{
+    echo "<h2>Upload Successful!</h2>";
+    if (empty($imagePaths)) {
+        echo "<p>No images were created.</p>";
+    } else {
+        echo "<p>The following image(s) have been created:</p>";
+        echo "<ul>";
+        foreach ($imagePaths as $path) {
+            echo "<li><a href='{$path}' target='_blank'>{$path}</a></li>";
+        }
+        echo "</ul>";
+    }
+}
+
+/**
+ * Renders an error HTML page.
+ *
+ * @param string $message The error message to display.
+ */
+function renderError(string $message)
+{
+    echo "<h2>Upload Failed</h2>";
+    echo "<p style='color:red;'>" . htmlspecialchars($message) . "</p>";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="estilo.css">
-  <title>HanziConvert</title>
+  <title>HanziConvert - Upload Status</title>
 </head>
 <body>
-<?php
-// Habilitar la notificación de errores para depuración
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-mb_internal_encoding('UTF-8');
-
-$target_dir = "media/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-  if($check !== false) {
-    echo "File SI es imagen - " . $check["mime"] . ".";
-    $uploadOk = 1;
-  } else {
-    echo "File NO es imagen.";
-    $uploadOk = 0;
-  }
-}
-
-// Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
-  echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-  $uploadOk = 0;
-}
-
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-  echo "Sorry, your file was NOT uploaded.";
-// if everything is ok, try to upload file
-} else {
-  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    echo "<br>The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-  } else {
-    echo "Sorry, hubo error uploading your file.";
-  }
-}
-
-$salida = $target_dir .$_POST['union'].'.jpg';
-convertAndResize($target_file, $salida);
-echo "✅ conversion ha terminado, comenzando Duplicacion...";
-
-foreach(mb_str_split($_POST['union']) as $char){
-  echo "<br> para ... " . $char;
-  copy($salida, $target_dir . $char . ".jpg");
-}
-
-if (mb_strlen($_POST['union']) > 1) {
-    if(unlink($salida)){    // borrando imagen vieja
-      echo "<br>File duplicated and original deleted";
-    }else{
-      echo "<br>error deleting original file";
-    }
-}
-
-// convirtiendo imagenes a .jpg
-function convertAndResize($inputFile, $outputFile) {
-    echo "<br>--------------de: " . $inputFile . " a: " . $outputFile . "--------------";
-    
-    if (!file_exists($inputFile)) {
-        echo "<br>ERROR: El archivo de entrada no existe: " . $inputFile;
-        return;
-    }
-
-    try {
-        $imagick = new Imagick($inputFile);
-    } catch (ImagickException $e) {
-        echo "<br>Error al leer la imagen de entrada: " . $e->getMessage();
-        return;
-    }
-
-    $imagick = $imagick->flattenImages();   // flatten layers of PSDs or PNPGs with transparency
-
-    // Crop & resize to fill 512x512 (preserve aspect ratio, center crop)
-    $imagick->scaleImage(512, 512, true);     // true = best fit (maintain ratio)
-    $imagick->cropThumbnailImage(512, 512);   // center crop to exact size
-
-    $imagick->setImageFormat("jpg");        // Set format and quality
-    $imagick->setImageCompressionQuality(85);
-
-    try {
-        $success = $imagick->writeImage($outputFile);   // write to file
-    } catch (ImagickException $e) {
-        echo "<br>Error al escribir la imagen: " . $e->getMessage();
-        $success = false;
-    }
-
-    if ($success) {
-        echo "<br>writeImage() tuvo exito.";
-        if (file_exists($outputFile)) {
-            echo "<br>El archivo de salida existe: " . $outputFile;
-            if (file_exists($inputFile)) {
-                unlink($inputFile);           // delete original file
-                echo "<br>Archivo original eliminado: " . $inputFile;
-            } else {
-                echo "<br>No se encontro el archivo original para eliminar: " . $inputFile;
-            }
-        } else {
-            echo "<br>ERROR: El archivo de salida NO existe despues de writeImage(): " . $outputFile;
-        }
-    } else {
-        echo "<br>ERROR: writeImage() fallo.";
-    }
-
-    $imagick->clear();        // clean up
-    $imagick->destroy();
-    echo "<br>Conversion ha TERMINADO !!";
-}
-
-?>
-
+  <h1>Upload Status</h1>
+  <?php handleImageUpload(); ?>
+  <br>
+  <a href="index.html">Upload another file</a>
 </body>
 </html>

@@ -8,5 +8,5 @@
 </g>
 <text class="h" id="tradi" transform="translate(10, 480)">販</text>
 <text class="h" id="shinji" transform="translate(200, 500)">.</text>
-<text class="h" transform="translate(400, 480)" xml:space="preserve"><tspan id="simpli" transform="translate(200, 500)">贩</text>
+<text class="h" id="simpli" transform="translate(400, 480)">贩</text>
 </svg>
