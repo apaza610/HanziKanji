@@ -251,7 +251,18 @@ function averiguarFormas() {
         seenGlyphs.add(v3);
     }
 
-    // The old alert logic is no longer valid as we are removing duplicates.
+    if (c1.value.trim() !== ""){
+        document.getElementById("btnYomu1").disabled = false;
+        document.getElementById("btnKaku1").disabled = false;
+    }
+    if (c2.value.trim() !== ""){
+        document.getElementById("btnYomu2").disabled = false;
+        document.getElementById("btnKaku2").disabled = false;
+    }
+    if (c3.value.trim() !== ""){
+        document.getElementById("btnYomu3").disabled = false;
+        document.getElementById("btnKaku3").disabled = false;
+    }
 }
 
 // function llenarTextInputs(){
