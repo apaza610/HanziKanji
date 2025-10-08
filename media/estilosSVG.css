@@ -1,7 +1,11 @@
-@font-face { font-family: 'Source Han Sans CN Light';
+/* @font-face { font-family: 'Source Han Sans CN Light';
     src: url('Source Han Sans CN Light.otf');
+} */
+@font-face {
+    font-family: 'Source Han Sans CN Light';
+    src: url('../extras/Source Han Sans CN Light.otf') format('opentype');
 }
-text, tspan {font-family: "Source Han Sans CN Light";}
+svg {font-family: "Source Han Sans CN Light";}
 .caja { fill: #393939; opacity: 0.8;}
 
 .a { fill: red;}
