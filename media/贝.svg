@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
 <style id="style1">@import url("estilosSVG.css");</style>
-<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="聿.jpg"/>
+<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="貝.jpg"/>
 <g id="grupo1" transform="translate(0, 0)">
 <rect id="rect1" class="caja" width="512" height="32"/>
-<text id="monogatari" y="20" xml:space="preserve">..radical <tspan class="f">PINCEL</tspan> ..</text>
+<text id="monogatari" y="20" xml:space="preserve">..<tspan class="d">Ba</tspan>bydoll in <tspan class="f">SHELL </tspan>store with <tspan class="f">MONEY</tspan> custome..</text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">聿</text>
+<text class="h" id="tradi" transform="translate(10, 480)">貝</text>
 <text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="simpli" transform="translate(400, 480)">贝</text>
 </svg>

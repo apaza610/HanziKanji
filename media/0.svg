@@ -3,7 +3,7 @@
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="0.jpg"/>
 <g id="grupo1" transform="translate(0, 0)">
-<rect id="rect1" class="caja" width="512" height="74"/>
+<rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve"><tspan>UMSA</tspan></text>
 </g>
 <text class="h" id="tradi" transform="translate(10, 480)">.</text>

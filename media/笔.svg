@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+<style id="style1">@import url("estilosSVG.css");</style>
+<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="笔.jpg"/>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="74"/>
+<text id="monogatari" y="20" xml:space="preserve">..<tspan class="f">BROCHA</tspan> es mayor a <tspan class="a">pincel</tspan>, de <tspan class="b">bamboo </tspan>y <tspan class="c">cerdas </tspan>para<tspan x="0" dy="22"><tspan class="d">b</tspan>r<tspan class="d">i</tspan>colaje, no para ji<tspan class="e">hitsu</tspan> 自筆(autografo)</tspan></text>
+</g>
+<text class="h" id="tradi" transform="translate(10, 480)">筆</text>
+<text class="h" id="shinji" transform="translate(200, 500)"></text>
+<text class="h" id="simpli" transform="translate(400, 480)">笔</text>
+</svg>
