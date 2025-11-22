@@ -2,9 +2,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="熱.jpg"/>
-<rect id="rect1" class="caja" width="512" height="74"/>
-<text id="monogatari" y="20" xml:space="preserve">..baby in <tspan class="a">womb </tspan>sufrira DeLa<tspan class="d">Rua</tspan>'s economy...  <tspan x="0" dy="20">thinks while <tspan class="f">HEAT</tspan>s the <tspan class="c">round </tspan>pot on the <tspan class="b">fire</tspan>..</tspan></text>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="52"/>
+<text id="monogatari" y="20" xml:space="preserve">su <tspan class="b">talento</tspan>埶 es <tspan class="c">agarrar </tspan>el <tspan class="a">fuego</tspan> <tspan class="d">re</tspan>sistiendo el <tspan class="f">CALOR</tspan>.. y <tspan x="0" dy="22">mostrarlo por inter<tspan class="e">nets</tspan>...</tspan></text>
+</g>
 <text class="h" id="tradi" transform="translate(10, 480)">熱</text>
-<text class="h" id="shinji" transform="translate(200, 500)">.</text>
-<text class="h" id="simpli" transform="translate(400, 480)">.</text>
+<text class="h" id="shinji" transform="translate(200, 500)"></text>
+<text class="h" id="simpli" transform="translate(400, 480)">热</text>
 </svg>

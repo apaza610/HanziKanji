@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-<style id="style1">@import url("estilosSVG.css");</style>
-<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="廴.jpg"/>
-<rect id="rect1" class="caja" width="512" height="60"/>
-<text id="monogatari" y="20" xml:space="preserve">..avanza a <tspan class="f">ZANCADA</tspan>s.. entre Buildings en D<tspan class="d">yin</tspan>gLight</text>
-<text class="h" id="tradi" transform="translate(10, 480)">廴</text>
-<text class="h" id="shinji" transform="translate(200, 500)">.</text>
-<text class="h" id="simpli" transform="translate(400, 480)">.</text>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+<style id="style1">@import url("estilosSVG.css");</style>
+<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="廴.jpg"/>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="32"/>
+<text id="monogatari" y="20" xml:space="preserve">..Rog<tspan class="d">e</tspan>rJu<tspan class="d">n</tspan>ior. avanza a <tspan class="f">ZANCADA</tspan>s</text>
+</g>
+<text class="h" id="tradi" transform="translate(10, 480)">廴</text>
+<text class="h" id="shinji" transform="translate(200, 500)"></text>
+<text class="h" id="simpli" transform="translate(400, 480)"></text>
+</svg>

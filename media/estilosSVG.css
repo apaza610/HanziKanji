@@ -1,8 +1,14 @@
-@font-face {
+/* @font-face {
     font-family: 'Source Han Sans CN Light';
     src: url('../extras/Source Han Sans CN Light.otf') format('opentype');
+} */
+ @font-face {
+  font-family: "BabelStone Han";
+  src: url("/fonts/BabelStoneHan.woff2") format("woff2"),
+       url("/fonts/BabelStoneHan.woff") format("woff");
+  unicode-range: U+20000-2FFFF; /* limit to SIP range if you want */
 }
-svg {font-family: "Source Han Sans CN Light";}
+svg {font-family: "BabelStone Han", sans-serif;;}
 .caja { fill: #393939; opacity: 0.8;}
 
 .a { fill: red;}
