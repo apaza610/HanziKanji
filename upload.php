@@ -90,8 +90,8 @@ function processImage(string $inputFile, string $outputFile)
 
     $imagick = new Imagick($inputFile);
     $imagick->flattenImages();
-    $imagick->scaleImage(512, 512, true);
-    $imagick->cropThumbnailImage(512, 512);
+    $imagick->scaleImage(700, 700, true);
+    $imagick->cropThumbnailImage(700, 700);
     $imagick->setImageFormat("jpg");
     $imagick->setImageCompressionQuality(85);
 

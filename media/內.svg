@@ -2,9 +2,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="內.jpg"/>
-<rect id="rect1" class="caja" width="512" height="74"/>
-<text id="monogatari" y="20" xml:space="preserve">..solid s<tspan class="d">na</tspan>ke is the <tspan class="a">人</tspan> que <tspan class="c">entra </tspan><tspan class="f">DENTRO DE</tspan> <tspan class="b">caja</tspan> <tspan x="0" dy="20">in the <tspan class="e">ni</tspan>ght</tspan></text>
-<text class="h" id="tradi" transform="translate(10, 480)">内</text>
-<text class="h" id="shinji" transform="translate(200, 500)">.</text>
-<text class="h" id="simpli" transform="translate(400, 480)">內</text>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="52"/>
+<text id="monogatari" y="20" xml:space="preserve"><tspan class="a">人</tspan> is solid s<tspan class="d">nèi</tspan>ke, <tspan class="c">entra </tspan><tspan class="f">DENTRO</tspan> la <tspan class="b">caja</tspan> at <tspan class="e">nai</tspan>ght para<tspan x="0" dy="22">esquivar 4 guardias<tspan x="0" dy="22"><tspan x="0" dy="22"><tspan x="0" dy="22"/></tspan></tspan></tspan></text>
+</g>
+<text class="h" id="tradi" transform="translate(10, 480)">內</text>
+<text class="h" id="shinji" transform="translate(200, 500)">内</text>
+<text class="h" id="simpli" transform="translate(400, 480)"></text>
 </svg>

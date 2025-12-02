@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+<style id="style1">@import url("estilosSVG.css");</style>
+<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="華.jpg"/>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="52"/>
+<text id="monogatari" xml:space="preserve"><tspan x="0" dy="22">a <tspan class="e">ca</tspan><tspan class="a">mbio</tspan> de <tspan class="c">10</tspan>bs por (2)hrs visita <tspan class="f">ESPLENDIDO</tspan> </tspan><tspan x="0" dy="22"><tspan class="b">grass </tspan><tspan class="c">colgante</tspan>, auspicia <tspan class="d">huá</tspan>wei..</tspan></text>
+</g>
+<text class="h" id="tradi" transform="translate(10, 480)">華</text>
+<text class="h" id="shinji" transform="translate(200, 500)"></text>
+<text class="h" id="simpli" transform="translate(400, 480)">华</text>
+</svg>
