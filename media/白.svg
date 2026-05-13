@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">Dong<tspan class="d">bái</tspan> in <tspan class="f">WHITE </tspan>dress knows that the fighting between<tspan x="0" dy="22">the (2) will be <tspan class="f">IN VAIN</tspan>, <tspan class="e">haku</tspan>ho wins anyways...</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">白</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">白</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

@@ -3,10 +3,10 @@
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="反.jpg"/>
 <g id="grupo1" transform="translate(0, 0)">
-<rect id="rect1" class="caja" width="512" height="74"/>
-<text id="monogatari" y="20" xml:space="preserve">..<tspan class="a">mano</tspan> punching <tspan class="f">CONTRA</tspan> el <tspan class="b">cliff </tspan>creo muchos anti<tspan class="d">Fan</tspan>..<tspan x="0" dy="22">no de<tspan class="e">jan</tspan> de burlarse :)</tspan></text>
+<rect id="rect1" class="caja" width="512" height="52"/>
+<text id="monogatari" y="18" xml:space="preserve">la <tspan class="a">mano </tspan>del (3)er <tspan class="d">fǎn</tspan>tastic doblega el fierro aunque<tspan x="0" dy="22">se ponga <tspan class="e">はん</tspan>たい en <tspan class="f">CONTRA</tspan>...</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">反</text>
-<text class="h" id="shinji" transform="translate(200,, 500)">.</text>
-<text class="h" id="simpli" transform="translate(400,, 480)">.</text>
+<text class="h" id="tradi" transform="translate(10, 500)">反</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

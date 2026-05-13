@@ -4,9 +4,9 @@
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="埶.jpg"/>
 <g id="grupo1" transform="translate(0, 0)">
 <rect id="rect1" class="caja" width="512" height="52"/>
-<text id="monogatari" y="20" xml:space="preserve"><tspan x="0" dy="22">convertir <tspan class="a">clodOfEarth</tspan> a <tspan class="b">pellet </tspan>muestra <tspan class="f">TALENTO</tspan>..</tspan></text>
+<text id="monogatari" xml:space="preserve"><tspan x="0" dy="22">su <tspan class="f">TALENTO </tspan>es convert<tspan class="d">yì</tspan>ng <tspan class="a">mound</tspan> to <tspan class="b">pellet</tspan>..</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">埶</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">埶</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

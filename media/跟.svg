@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">..<tspan class="a">pie</tspan> con mas <tspan class="b">aguante</tspan> determina <tspan class="f">CON</tspan> que <tspan class="f">SEGUIDOR</tspan>es<tspan x="0" dy="22">se queda <tspan class="d">gen</tspan>ghisKhan</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">跟</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">跟</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

@@ -3,10 +3,10 @@
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="短.jpg"/>
 <g id="grupo1" transform="translate(0, 0)">
-<rect id="rect1" class="caja" width="512" height="74"/>
-<text id="monogatari" y="20" xml:space="preserve"> saved by <tspan class="f">SHORT </tspan>distance, <tspan class="a">arrow</tspan> scratched him while <tspan x="0" dy="22">eating <tspan class="c">beans</tspan>, los culpables es<tspan class="e">tan</tspan> en la a<tspan class="d">duan</tspan>a !!</tspan></text>
+<rect id="rect1" class="caja" width="512" height="52"/>
+<text id="monogatari" y="18" xml:space="preserve"> saved by <tspan class="f">SHORT </tspan>distance, <tspan class="a">arrow</tspan> scratched him while <tspan x="0" dy="22">eating <tspan class="c">beans</tspan>, los culpables es<tspan class="e">tan</tspan> en la a<tspan class="d">duǎn</tspan>a !!</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">短</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">短</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

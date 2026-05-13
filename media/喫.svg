@@ -4,9 +4,9 @@
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="喫.jpg"/>
 <g id="grupo1" transform="translate(0, 0)">
 <rect id="rect1" class="caja" width="512" height="52"/>
-<text id="monogatari" y="20" xml:space="preserve">..<tspan class="d">chi</tspan>ef irons le da un <tspan class="b">contrato</tspan> ella le da de <tspan class="f">BEBER</tspan>, el le da<tspan x="0" dy="22">de <tspan class="f">COMER</tspan>..</tspan></text>
+<text id="monogatari" y="20" xml:space="preserve">..<tspan class="d">chī</tspan>ef irons le da (1) <tspan class="b">contrato</tspan> ella le da de <tspan class="f">BEBER</tspan>, <tspan x="0" dy="22">el le da de <tspan class="f">COMER</tspan>..</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">吃</text>
-<text class="h" id="shinji" transform="translate(200, 500)">喫</text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">吃</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">喫</text>
 </svg>

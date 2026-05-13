@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="60"/>
 <text id="monogatari" y="20" xml:space="preserve">..en <tspan class="a">la corte</tspan>, <tspan class="f">SOBRESALE </tspan>el que sabe que paso <tspan x="0" dy="22">con el accidente del <tspan class="d">ting</tspan>lado..</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">挺</text>
-<text class="h" id="shinji" transform="translate(200,, 500)">.</text>
-<text class="h" id="simpli" transform="translate(400,, 480)">.</text>
+<text class="h" id="tradi" transform="translate(10, 500)">挺</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

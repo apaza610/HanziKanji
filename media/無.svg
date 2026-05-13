@@ -4,9 +4,9 @@
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="無.jpg"/>
 <g id="grupo1" transform="translate(0, 0)">
 <rect id="rect1" class="caja" width="512" height="52"/>
-<text id="monogatari" y="20" xml:space="preserve">take<tspan class="e">mu</tspan>ra por posecion de pistola condenado a 40 años <tspan x="0" dy="22">se <tspan class="f">NIEGA </tspan>a aceptarlo, quema la celda, del 天 baja</tspan><tspan x="0" dy="22"><tspan class="d">wú</tspan>kong, con hook ayuda escapatoria de celda (2)</tspan></text>
+<text id="monogatari" y="20" xml:space="preserve">take<tspan class="e">mu</tspan>ra por posecion de <tspan class="c">pistola </tspan>condenado a <tspan class="b">40 </tspan>años <tspan x="0" dy="22">se <tspan class="f">NIEGA </tspan>a aceptarlo, <tspan class="a">quema </tspan>celda (2) y del <tspan class="a">天</tspan> baja</tspan><tspan x="0" dy="22"><tspan class="d">wú</tspan>kong, con <tspan class="b">hook</tspan> da escapatoria</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">無</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)">无</text>
+<text class="h" id="tradi" transform="translate(10, 500)">無</text>
+<text class="h" id="simpli" transform="translate(200, 500)">无</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

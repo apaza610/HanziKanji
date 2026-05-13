@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">..a <tspan class="d">hua</tspan> mulan le <tspan class="a">habla </tspan>cierta <tspan class="b">lengua </tspan>un <tspan class="f">RELATO</tspan> sobre<tspan x="0" dy="22">sus antepasados</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">話</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)">话</text>
+<text class="h" id="tradi" transform="translate(10, 500)">話</text>
+<text class="h" id="simpli" transform="translate(200, 500)">话</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

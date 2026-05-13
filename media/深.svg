@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">..henryTow<tspan class="d">shen</tspan>d sale de <tspan class="f">PROFUNDA </tspan><tspan class="a">cueva </tspan>afuera se ve<tspan x="0" dy="22">un <tspan class="b">waterfall </tspan>and a <tspan class="c">tree</tspan>..</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">深</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">深</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

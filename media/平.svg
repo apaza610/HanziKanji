@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">bull <tspan class="a">demon</tspan>'s 娘 <tspan class="d">píng</tspan>píng (2) tests <tspan class="b">dry</tspan>land <tspan class="f">FLAT</tspan>ness, <tspan x="0" dy="22">so <tspan class="e">hei</tspan>hachi's battle will be <tspan class="f">FAIR</tspan>..</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">平</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">平</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

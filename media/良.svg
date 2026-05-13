@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">..esta es la mas <tspan class="f">BUENA </tspan>de estas diosas, the contest <tspan x="0" dy="22">was in brasi<tspan class="d">lian</tspan> city: <tspan class="e">rio </tspan>de janeiro</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">良</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">良</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">..<tspan class="d">qì</tspan>nie flota en <tspan class="f">AIRE</tspan>, esta con <tspan class="f">IRA</tspan> pues dio (4) deseos <tspan x="0" dy="22">a prof<tspan class="c">X</tspan> y aquel solo le pidio <tspan class="c">arroz </tspan>!!<tspan x="0" dy="22"><tspan x="0" dy="22"><tspan x="0" dy="22"/></tspan></tspan></tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">氣</text>
-<text class="h" id="shinji" transform="translate(200, 500)">気</text>
-<text class="h" id="simpli" transform="translate(400, 480)">气</text>
+<text class="h" id="tradi" transform="translate(10, 500)">氣</text>
+<text class="h" id="simpli" transform="translate(200, 500)">气</text>
+<text class="h" id="shinji" transform="translate(400, 500)">気</text>
 </svg>

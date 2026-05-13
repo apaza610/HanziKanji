@@ -4,9 +4,9 @@
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="是.jpg"/>
 <g id="grupo1" transform="translate(0, 0)">
 <rect id="rect1" class="caja" width="512" height="52"/>
-<text id="monogatari" y="20" xml:space="preserve">..Lian<tspan class="d">Shi</tspan> y <tspan class="e">Se</tspan>rena enseñando que: hay que <tspan class="f">SER</tspan> <tspan class="a">correcto </tspan><tspan x="0" dy="22">en el pais del <tspan class="b">sol </tspan>naciente..  </tspan></text>
+<text id="monogatari" y="18" xml:space="preserve">Lian<tspan class="d">Shì</tspan> y <tspan class="e">Se</tspan>rena a los (4) vientos: hay que <tspan class="f">SER</tspan> <tspan class="a">correcto </tspan><tspan x="0" dy="22">en el pais del <tspan class="b">sol </tspan>naciente..</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">是</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">是</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

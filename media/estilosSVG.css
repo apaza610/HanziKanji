@@ -17,7 +17,7 @@ svg {font-family: "BabelStone Han", sans-serif;;}
 .d { fill: white; font-weight: bold;}
 .e { fill: black; font-weight: bold;}
 .f { fill: fuchsia;}
-.h { fill: whitesmoke; font-size: 72px;}
+.h { fill: whitesmoke; font-size: 72px; text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.9);}
 #monogatari { fill: gray; font-size: 20px; inline-size: 512px;}
 
 circle {

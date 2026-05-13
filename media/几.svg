@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">de(3) <tspan class="a">tiny</tspan> skein <tspan class="f">CUANTOS</tspan> <tspan class="d">G</tspan>.I.Joe <tspan class="b">defenders </tspan>se hace?<tspan x="0" dy="22">-<tspan class="f">CASI </tspan>(1) como ves en esta <tspan class="f">MESITA</tspan> es<tspan class="e">ki</tspan>nera</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">幾</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)">几</text>
+<text class="h" id="tradi" transform="translate(10, 500)">幾</text>
+<text class="h" id="simpli" transform="translate(200, 500)">几</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

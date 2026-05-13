@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">..<tspan class="d">hēi</tspan>hachi <tspan class="a">quemo </tspan>el <tspan class="b">campo</tspan>, quedando <tspan class="f">NEGRO</tspan>..<tspan x="0" dy="22">..<tspan class="e">koku</tspan> no lo pudo evitar</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">黑</text>
-<text class="h" id="shinji" transform="translate(200, 500)">黒</text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">黑</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">黒</text>
 </svg>

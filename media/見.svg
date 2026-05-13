@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve"><tspan class="d">jiàn</tspan><tspan class="e">Ken</tspan>Pon: 目 ganador podra <tspan class="f">VER</tspan> <tspan class="b">piernas</tspan> de Jianan<tspan x="0" dy="22">..solo <tspan class="d">xiàn</tspan> de <tspan class="f">MOSTRAR</tspan> por (4) segundos :(</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">見</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)">见</text>
+<text class="h" id="tradi" transform="translate(10, 500)">見</text>
+<text class="h" id="simpli" transform="translate(200, 500)">见</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

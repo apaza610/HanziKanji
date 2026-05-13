@@ -4,9 +4,9 @@
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="戈.jpg"/>
 <g id="grupo1" transform="translate(0, 0)">
 <rect id="rect1" class="caja" width="512" height="52"/>
-<text id="monogatari" y="20" xml:space="preserve">..a <tspan class="f">HALBERD </tspan>in the <tspan class="d">go</tspan>bi戈壁 desert..</text>
+<text id="monogatari" y="18" xml:space="preserve">(1) solitario ar<tspan class="d">gē</tspan>nian con <tspan class="f">HALBERD</tspan> in 戈壁desert va <tspan x="0" dy="22">a la <tspan class="d">gē</tspan>rra...</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">戈</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">戈</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

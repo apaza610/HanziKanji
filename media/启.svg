@@ -2,9 +2,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="启.jpg"/>
-<rect id="rect1" class="caja" width="512" height="74"/>
-<text id="monogatari" y="20" xml:space="preserve">..esa <tspan class="a">puerta </tspan>tiene un <tspan class="b">cuadro</tspan>, <tspan class="d">chi</tspan>hiro la <tspan class="f">ABRE</tspan>,<tspan x="0" dy="20">asi <tspan class="f">INICIA</tspan> su aventura..</tspan></text>
-<text class="h" id="tradi" transform="translate(10, 480)">启</text>
-<text class="h" id="shinji" transform="translate(200, 500)">.</text>
-<text class="h" id="simpli" transform="translate(400, 480)">.</text>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="52"/>
+<text id="monogatari" y="18" xml:space="preserve">un <tspan class="b">golpe</tspan> abre la <tspan class="a">puerta </tspan>deja un <tspan class="f">OPENING</tspan> por el cual<tspan x="0" dy="22">obtener <tspan class="f">ENLIGHTMENT</tspan> de heiha<tspan class="d">qǐ</tspan> y <tspan class="e">kei</tspan>ra...(3) people</tspan><tspan x="0" dy="22">scene</tspan></text>
+</g>
+<text class="h" id="tradi" transform="translate(10, 500)">啓</text>
+<text class="h" id="simpli" transform="translate(200, 500)">启</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

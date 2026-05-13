@@ -2,9 +2,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="订.jpg"/>
-<rect id="rect1" class="caja" width="512" height="74"/>
-<text id="monogatari" y="20" xml:space="preserve">..after rea<tspan class="d">ding</tspan> el <tspan class="f">PEDIDO </tspan>he say: <tspan class="f">REVISEN </tspan>los <tspan x="0" dy="20"><tspan class="a">clavo</tspan>s el tetanos no lo cubre su <tspan class="f">SUSCRIPCION </tspan>:)</tspan></text>
-<text class="h" id="tradi" transform="translate(10, 480)">訂</text>
-<text class="h" id="shinji" transform="translate(200, 500)">.</text>
-<text class="h" id="simpli" transform="translate(400, 480)">订</text>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="52"/>
+<text id="monogatari" y="18" xml:space="preserve">foun<tspan class="d">dìng</tspan> father <tspan class="a">dice</tspan>: se va a <tspan class="f">REVISAR </tspan>a quienes se<tspan x="0" dy="22"><tspan class="f">SUSCRIBIERON </tspan>o le hicieron <tspan class="f">PEDIDOS</tspan>, seran <tspan class="c">clavado</tspan>s </tspan><tspan x="0" dy="22">junto a el</tspan></text>
+</g>
+<text class="h" id="tradi" transform="translate(10, 500)">訂</text>
+<text class="h" id="simpli" transform="translate(200, 500)">订</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

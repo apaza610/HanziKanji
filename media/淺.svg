@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">..jackie<tspan class="d">Chan</tspan> en <tspan class="f">SHALLOW</tspan> <tspan class="c">water</tspan>  y su <tspan class="e">sen</tspan>sei <tspan x="0" dy="22">con un <tspan class="a">halberd</tspan> en cada mano..</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">淺</text>
-<text class="h" id="shinji" transform="translate(200, 500)">浅</text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">淺</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">浅</text>
 </svg>

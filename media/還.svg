@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-<style id="style1">@import url("estilosSVG.css");</style>
-<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="還.jpg"/>
-<g id="grupo1" transform="translate(0, 0)">
-<rect id="rect1" class="caja" width="512" height="52"/>
-<text id="monogatari" xml:space="preserve"><tspan x="0" dy="22"><tspan class="c">miraSorprendida</tspan>.. y <tspan class="a">no </tspan>puedes <tspan class="b">moverte</tspan>?</tspan><tspan x="0" dy="22">si, <tspan class="f">TODAVIA </tspan><tspan class="d">hái</tspan> que <tspan class="f">DEVOLVER </tspan><tspan class="d">huán</tspan>ete a su lugar</tspan><tspan x="0" dy="22">al menos no son los (2) pies..</tspan><tspan x="0" dy="22"/></text>
-</g>
-<text class="h" id="tradi" transform="translate(10, 480)">還</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)">还</text>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+<style id="style1">@import url("estilosSVG.css");</style>
+<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="還.jpg"/>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="52"/>
+<text id="monogatari" xml:space="preserve"><tspan x="0" dy="22"><tspan class="c">miraSorprendida</tspan>.. y <tspan class="a">no </tspan>puedes <tspan class="b">moverte</tspan>?</tspan><tspan x="0" dy="22">si, <tspan class="f">TODAVIA </tspan><tspan class="d">hái</tspan> que <tspan class="f">DEVOLVER </tspan><tspan class="d">huán</tspan>ete a su lugar</tspan><tspan x="0" dy="22">al menos no son los (2) pies..</tspan><tspan x="0" dy="22"/></text>
+</g>
+<text class="h" id="tradi" transform="translate(10, 500)">還</text>
+<text class="h" id="simpli" transform="translate(200, 500)">还</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
+</svg>

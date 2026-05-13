@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">a <tspan class="a">corpse </tspan>is crossing the <tspan class="f">DOOR</tspan>..</text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">户</text>
-<text class="h" id="shinji" transform="translate(200, 500)">戸</text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">户</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">戸</text>
 </svg>

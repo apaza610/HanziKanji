@@ -6,7 +6,7 @@
 <rect id="rect1" class="caja" width="512" height="52"/>
 <text id="monogatari" y="20" xml:space="preserve">..<tspan class="a">escena </tspan>de terror con <tspan class="b">cabello </tspan>desp<tspan class="e">ei</tspan>nado:<tspan x="0" dy="22"><tspan class="f">SHADOW</tspan> figure crawl<tspan class="d">ing</tspan> out of the tv<tspan class="f">REFLECTOR</tspan>..</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">影</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">影</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

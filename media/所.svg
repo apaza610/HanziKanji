@@ -2,9 +2,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="所.jpg"/>
-<rect id="rect1" class="caja" width="512" height="74"/>
-<text id="monogatari" y="20" xml:space="preserve">..si encuentra en <tspan class="a">puerta </tspan>de <tspan class="d">suO</tspan>ficina un <tspan class="b">hacha</tspan><tspan x="0" dy="20">mejor buscar otro <tspan class="f">LUGAR</tspan>..</tspan></text>
-<text class="h" id="tradi" transform="translate(10, 480)">所</text>
-<text class="h" id="shinji" transform="translate(200, 500)">.</text>
-<text class="h" id="simpli" transform="translate(400, 480)">.</text>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="52"/>
+<text id="monogatari" y="18" xml:space="preserve">ya<tspan class="d">suǒ</tspan>の妹 perdio suHonor, culpa de bi<tspan class="e">sho</tspan>p, pero en el<tspan x="0" dy="22"><tspan class="f">LUGAR </tspan>tras la <tspan class="c">puerta </tspan>caera el <tspan class="a">hacha</tspan> de retribucion</tspan></text>
+</g>
+<text class="h" id="tradi" transform="translate(10, 500)">所</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

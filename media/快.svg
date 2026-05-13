@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
+<style id="style1">@import url("estilosSVG.css");</style>
+<image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="快.jpg"/>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="52"/>
+<text id="monogatari" xml:space="preserve"><tspan x="0" dy="16">en viaje de <tspan class="f">PLACER</tspan>, <tspan class="c">separa</tspan>do de <tspan class="a">sentimiento</tspan>s</tspan><tspan x="0" dy="22">..<tspan class="d">kuài</tspan>Liang <tspan class="f">FELIZ</tspan>, <tspan class="f">RAPIDA</tspan>mente rodeado de (4) nenas</tspan><tspan x="0" dy="22"> <tspan class="e">Kai</tspan> entre ellas..</tspan></text>
+</g>
+<text class="h" id="tradi" transform="translate(10, 500)">快</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
+</svg>

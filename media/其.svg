@@ -2,9 +2,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="512" height="512" version="1.1" viewBox="0 0 512 512" xml:space="preserve">
 <style id="style1">@import url("estilosSVG.css");</style>
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="其.jpg"/>
-<rect id="rect1" class="caja" width="512" height="74"/>
-<text id="monogatari" y="20" xml:space="preserve">..<tspan class="f">THAT</tspan> is sebas<tspan class="d">qi</tspan>an y esas son <tspan class="f">SUS</tspan> patas..</text>
-<text class="h" id="tradi" transform="translate(10, 480)">其</text>
-<text class="h" id="shinji" transform="translate(200, 500)">.</text>
-<text class="h" id="simpli" transform="translate(400, 480)">.</text>
+<g id="grupo1" transform="translate(0, 0)">
+<rect id="rect1" class="caja" width="512" height="52"/>
+<text id="monogatari" y="18" xml:space="preserve">其れ<tspan class="f">THAT</tspan> is sebas<tspan class="d">qí</tspan>an, <tspan class="e">ki</tspan>ere usar <tspan class="f">SUS</tspan> (2) pinzas</text>
+</g>
+<text class="h" id="tradi" transform="translate(10, 500)">其</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

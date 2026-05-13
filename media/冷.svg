@@ -4,9 +4,9 @@
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="冷.jpg"/>
 <g id="grupo1" transform="translate(0, 0)">
 <rect id="rect1" class="caja" width="512" height="52"/>
-<text id="monogatari" y="20" xml:space="preserve">..<tspan class="a">comand</tspan>er con <tspan class="d">leng</tspan>ua pegada al <tspan class="c">ice </tspan>en <tspan class="e">rei</tspan>zoko冷蔵庫<tspan x="0" dy="22">por culpa del <tspan class="f">FRIO</tspan>..</tspan></text>
+<text id="monogatari" xml:space="preserve"><tspan x="0" dy="22">halla <tspan class="e">rei冷</tspan>蔵庫 <tspan class="f">ABANDONADO</tspan>, <tspan class="a">daOrden</tspan>: a las (3) push</tspan><tspan x="0" dy="22">boton en <tspan class="d">lěng</tspan>uaje alien... sale torrente <tspan class="f">FRIO</tspan> de <tspan class="c">hielo</tspan>..</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">冷</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">冷</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>

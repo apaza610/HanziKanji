@@ -4,9 +4,9 @@
 <image id="image1" width="512" height="512" preserveAspectRatio="none" xlink:href="正.jpg"/>
 <g id="grupo1" transform="translate(0, 0)">
 <rect id="rect1" class="caja" width="512" height="52"/>
-<text id="monogatari" y="20" xml:space="preserve">..<tspan class="e">sei</tspan>ya hace lo <tspan class="f">CORRECTO </tspan><tspan class="d">si en</tspan>cuentra <tspan class="b">1</tspan> paso de cebra<tspan x="0" dy="22">lo usa mientras trafico es <tspan class="a">detenido</tspan>..</tspan></text>
+<text id="monogatari" y="18" xml:space="preserve">hay que <tspan class="f">ENDEREZAR</tspan> jenga, <tspan class="d">zhèng</tspan> se pone de (4), <tspan x="0" dy="22"><tspan class="e">sei</tspan>ya se <tspan class="a">detiene</tspan>, apunta <tspan class="f">EXACTO </tspan>al <tspan class="f">CENTRO </tspan>y </tspan><tspan x="0" dy="22">mete <tspan class="c">uno</tspan> en castigo</tspan></text>
 </g>
-<text class="h" id="tradi" transform="translate(10, 480)">正</text>
-<text class="h" id="shinji" transform="translate(200, 500)"></text>
-<text class="h" id="simpli" transform="translate(400, 480)"></text>
+<text class="h" id="tradi" transform="translate(10, 500)">正</text>
+<text class="h" id="simpli" transform="translate(200, 500)">.</text>
+<text class="h" id="shinji" transform="translate(400, 500)">.</text>
 </svg>
